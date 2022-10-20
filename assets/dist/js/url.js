@@ -1,0 +1,11 @@
+  var toEdit = 0
+  var Edition = 0
+  var base_local = "http://127.0.0.1:8000"
+  var base_online = "http://195.15.218.172"
+  const asurl_not_paginated = base_local+"/agent_app/agent/?paginated=t"
+  const client_add = base_local+"/client_app/client/"
+  const agent_add = base_local+"/agent_app/agent/"
+  const admin_add = base_local+"/admin_app/admin/"
+  const salarie_add = base_local+"/salarie_app/salarie/"
+  const user_all = base_local+"/admin_app/users/"
+  const token = $.cookie("token")

@@ -1,0 +1,511 @@
+<html lang="en" style="height: auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!--<script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>-->
+    <script
+      src="./assets/plugins/jquery/jquery.min.js"
+    ></script>
+    <script src="./assets/dist/js/adminlte.js"></script>
+    <title>Amexpert - Extranet</title>
+    <script defer="defer" src="/static/js/main.069f0b50.js"></script>
+    <link href="./assets/dist/css/adminlte.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/plugins/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style data-styled="active" data-styled-version="5.3.5"></style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/282.e4ab9df4.chunk.css"
+    />
+  </head>
+  <body
+    classname="hold-transition sidebar-mini layout-navbar-fixed"
+    style="height: auto"
+  >
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="wrapper">
+        <nav
+          class="main-header navbar navbar-expand navbar-white navbar-light relative"
+        >
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABQCAYAAABCiMhGAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAQ6ADAAQAAAABAAAAUAAAAABW46yMAAAjc0lEQVR4AcV8aXBc2XXeua/3RmPfd4AASIL7ApJDzYw4GlnSbBxNLGtsZS37R+wZpeKKKpX4p36kKqlSWY7ikhzZrkoiV5yS5UXLaDyZRTPc1yEBkiABEiD2fV8bvb2b77vdr9kAARAcDSev0Hiv37v3nHPPPfes97Xq/WFzVIt2K3n0oXWyjdpK4wxw7OZ0SYHIePrg2aqbqS9Oe6f/Rm34PBNPZrtMGJnXmW1ARZxMUFor5TR60ABDx0MywDJnsAAtidEwhR1JAPqit+nO/7xgex68dtomWyT7kJmmg2nFa4BItkz9Tz0wCHCdap8Cu6Zvqq0DywHsNHYe476dgmdOa55bwOJ22maeObiR6bjMLtmag2iq9IjbSg55cj4uE7MJDFjp2lKPCvqStM0vJfTgZAIME11W4FIBryXDU3GJQO4yj4BPSU7Q0nNLtkTjWmpKPGirJGZr6R2NGZ6F/ErC6BeJGn6b7soSXZRtScBvqdHpuI7GHjxjg5yg0qGApYanEpnowGaR4lxLR2Ja5pb0KhZwZsvy3To/26X4ZF1mLEVs+btzC7qjLyaxhJY3TubKgW1+HQPxF9pX5K0rS0KR+ue/ka2PNwcVWCbvtS7L/726TKbJb58ISU2pW370/oJMzyd0wE+Skkd1sVue2e2X690RaeuKyleOBPWXDmXJta4V/eOPFgTPdXOtV1/qWFGTc7Z4kwtYRTGYRkzK8Wa//vmFJZkP2+L3AGwK8p5arzSWe+V/fTAvPtz3uDArQEkmNFd7JRQQudETkwSYzgnyoo0L4nDyWJZ+Zk9QedF+FTOSJGt9qzeib/VEpaLQrdv7ourty0uys8prFsQyGLWwbAONknfAlP3bfLIUtvWH18OyvKINw8IRLfG4yMyiLZZLNNoALXpgKorzXFJb6lU+j6W7hmLys/NLnD1NRsbQ56lmv/JDqmbmbVWW79J76nzKAwZf7AxLe29UleRZenrBVjlZlpABkBjDjm1lHh2OiFoCDbtrfdJQ5sGS0/LRjbC+3BGRN14NSVGORw9MxuT0zbBqafLLjkovaPGAKRRoSEamEFNGKRXX7kWEA3rpKGQPN+8NxdWtvqjeV+/jmCQ7YEkJBtU3HgeBEbt/Iq4WVmxprnWDiRgROZUCvIJZGJ2GeOEg/CCWQBCD3V7lVV84END/871F+dvTi2ohrOXk8aA+1OhXHYMxNpcs4CnOdXGmNfqxu6J08lgCvpGZOLWNubGjymtopr7KBtkFOZZQYikBAZC9v94vboz6eldEX7gdlt21HvmNg1liWfgjJwBljWRo3TkY1Xf6o2Ysrd1RABRZhEieurEsjRUeQ4jbJfLsHr+8fXlZfgqRxSxKdZFbju3wy62eRdOG/4iDOqIKz3iQsYU5LrOOExCumQVbNBBk+V16fjmhZiFJ0STf0FnJje6ouj8co36SmaWEKs6xdHkBYUU5IboScF3UvTioZ+aXtCxjEs9jKbfe4xi0TAHH3nqPdruUxSUMWKY9+lEizDX7k9hVzOCg27CWpxYSUgIR7RuLGe6Cy/reUMz6GOs62U2pmmKPHNnh02CIhTHq334uJKFgisdEgQ8bQ9HJ2EyGUtMJGS+N686hqHzYGpbyApd889U8+etfLegrnREpyV3S9RB5dFaNlW69l8uEI4YCrSgEIw2LxUjB+IytDEbgudkbxTJwCZXx4Sa/2o6Ji4P772L59Y3GjYRnDB09HhxG5MgM0k2i+X98Lm5PztuxZ3YHrVeOBt350N487o/EIM4LkZ6huBTnu62KArf2g8YXj2SpW73RaHZAqWd2B9xgmI3ZimHWPF6PWOX5rtj4bEJzOTkHFLKCHgLxEZ0dtKzf+0qOux465F+/lKu//4vZ+J2BmB2H1JSCSYega57dFwQsWnWoB0hkz2jULi90x6iYBwiXA8ART4iqL3W7wMhES5PPfbARZgc2YmQqEbuNJQ5GQOlhmfqUXVHkjoeCipx1pwZvYKi+HzZD30J3gD22re1YQuIQHwtLAaiTvMQTmCaJcxb4B1q1z2WAWZG4jtFGe9yKMGy0S5ARIF/hGZdtktcGnfFBDFCsDhKo0Nbly63W0bkBKlAyQmMdm4PmHBo/SQcHTWCgMZowRiEFMXkiQo+bOkVs0u6yAAUcjMV0HCtP++EdcDh2AkoeY/SgDZoAdrp/3CyTlJgY/8nlEqhhw2n0xfA4FAABgvSSIgSjx0A4GGe4y0FweGxHPcMD6zSJzMAwjExzxowX9+1EQhd98Y/14N//U6yFhAsDSh/sRt0CwAZikh+GQQCdbJY6GbhsBfoN6DinAQfWkYsgITmpA/0xRoClDgP9vEhq4TRqKp6OgRV7CvovU684IDLPBkvqhkNM5vPHuc4vq5WG4r1W51JTfKS71eGRAZGEzf+ZGB8H+uq2DhRCJK8KQ0p2VHutoDc5Z2lmQJvrd28k9Gi0UuXm5yfxo5dDinM2dDlfeMaROiW/4L+DNPMZ7zntknOWbH686TncVmom7yvW6ZGVBwgzO/PaAZoGkmrK75nAnbapds5j3s5sNzczI2XeYfgytgShn9guzQzAU15/tjTvOqoat+9I+wnpETjAeM7EkELK21s+UgPzeL36Sy++ZLp9+eTXFN1z20YEsXbgbLH2XuZ3Xjt0ZN43kDP+ZbTrutupF7vfg/ccNz05QWlmsAtNsNvtVl4v7NOTPoC8orpK5xcUGlx5eXmqvKLSnhgfM0vlSaPHOM1400wGws8E8XoDo2YGI7QLRPFQUP45ublPfhLWEOMIEm/TYaKx+OwP4IysrCjbTqp5MmdlBT75Z31kjD2pvT97ErDElQz296mlhUWDfW521h4dGfnMJdXwAv94fpQVfaLzFA6H1eT4mMEx1N9nJ2JQZv8fJsbgBDeSUathzxMdN4GbYVJJ0zmEk0uHCCF+UhgseEJen0/DmsAZsmlV6BQ5RD0xCh0UxLTKmjiYP+Uz3GtLPG6PGawvEJAgP1lZ4vX6dH5hkRloSVm5SiTidjQSUeGlZVkOL1OHSDQShYuNDBiYg+OJMYVTtSpQ+VSZAA/XjdkOhbJ1XmGB5OcXSXZOtsC3MDKCgUsikUA8kUwLeDwelZdfoGDyjIWBVKhoNCoLc7N6ZmpKZuAkLS0usM+nypRM4/EkJMMMJjc3T5dXVkppWTkkwi/LS4syNzsj83OzsrCwICvhFZVAOuxAS4vOzs2V4cEBu+P2LfDCLX5ITnZ2NkxtvuTmF0hZRSXby9jIsB4ZHpSF+flPhSnpRZiSggfMWPvkccUE/aEPNMRf19TXS0VltbgQtU1NjMv4yKjMzs1gQGEVBwOoCzjztChx5vpwJBIxCS8vMzRUGKyeHB8Xt8cjgUBQ5yM8wDKSum0NuqyyUg0N9OuB3l6zjNj+cUld295Ih1kmBPXrMgIQqAiLikv0jl27MKu5MjY6Iv19vTI/OwtxjzjKME04FekqvCkazH3wlQyLYZnws7gwD3ijkJJ8qQWjm7bvlKKiYum8c1tPYwnBV0G3NOi1Y93wu9ODqKnGM5I7G/Z51APt8XilrqFBI6ZB/iAmt2+2kXgFpyopBYiRHwVkk+dwzGw6aHpibFQtzM1h+VVJA3C1HDsudztv68G+PoMXzKWwfeIj5Quj/xaBwDJoWgGf3w9r4JX8wkKpra2X3IICgfhKOxgBgg00JGLWI05zaSxBhyxgxu3ztvTe79L9fX1qcmLczgplq1AoZGBnUsVkCVNF4fCy6um+J9PTU3r3vv1y+MhTUlffoPt6ezSlkJMBK6RglcxS3DJnQDGyU1vmg5nl4pJSvf9wi85FYEVfAYkno9CuXbmk++/ft6ATHjAACCC+xneIxqJ6AqLe1dkpvRjM1NSkwsCY3DFJYUwGslPIhEN5wqro2vptZjmUVVVpvx+FF+ACAaw2GDpmpibl0rkzUt/QqBuadoApxzBPFnAlZGpy0r5x/RocuvEHtGzAFeNngAeUXSMZqeW6QfPVtzGbqvN2u97W2KTnYPb6e+5bUHgqAv8ALVcjB91Ly0sQ417Veu2K9HZ1qfAy6iRIziPnZqwGpYtBGmYdPkWEy0FGhwbU8ECf/vjyBamuqZP9Lcd03bZtEsoKkbnEw0NRn9zruCOgQYdgfRp3NNtImFp93V1qaXHRaZdsvYX/bqPHyI0tcIR0LC8tycTYmILJjMM0WogpuF4fQgwJ0aMwha1Xr8qtto+NJfF6vConLx/+Rq6EcnLkmRNfEDBVfH4fnSvpuN0ul8+fMwpzYX5O0Rx33+2Q/t4e2d68Sx8+dlxXVteIz4eaZsqK8LxiAj5tcwmJDujRpL7K4NsWOIEmq4pIW+nCWczOzdH0FGemp6Eziij+NJZphkBKpKe7Sy6dPc1Zw32tEK5LcVmFMZF5uPZ4ffLqb/2O7IT1oYdKZ+rq5Usyv4jKGmZ8fnZaxmGRxkeH1dzMtLTfaIX4T+hjz5yQHc27YHJRL3xw0KfRY8PDMOmVUoDUwNjIyCqaHjRdc0WqU5Q/8DPWtNngqwYRcI1Rr4ysCBIxirZ/GkQaXYFOMKOa1uTSubNmIPAspRIKtrpuGxmH5JGHom5iD8YmD6Q+SROZHQgGzaewuFTK4K8M9vXIYE+3Gh0ektPvv2s80YMtR3UWXHpKht8f0OgDBgy7oNBtwqSCp07KhL/emAwfuCpw8VjWhDNIpwqxArR1VEH5KSwZeoga4bjm7N7t6JDzpz8SRKOK8UdT8x7DCL8/mJ6B9Yha7x6drqKSMkhiruTmFejO9jaZmZ6UK+fPCsy5PnCoRXl9XiMVwG8ivjhqA9Rf2Tk5NvSPlSmx6+Fw7pEpyZDRubP5WcNNNj7F0sIC+tJsKgXRJWKYAhdc5SF94cwpPYWwvBBO0fHPPy/b4CD5A4/PCIcU6jTMvNQ2NMiRpz8vZeUVwmTuZViSXihOSAADQY28CMdjLA09WdBj+j1KFxprkkK2ZWZQKnw+f9JMYk0700wxHR4aFOgBfQ1rfmSwX2FG1YkvvSCvvf4NSFIoherXO9Gxe/mrvylfBUyE+jI9Oa6uQkKCwSwbk4CMXUpngSX0M4jNH/TD54c13uKBVesMa+MeQGTWICVgGv5BZksSQWdnZHBA32z92LjR1fUN4kZwRl+BEvJpHJAOte/AQciyC9K2w0xod1enar16BVZnaZVJJ73zsEaQSO0L+I20bEQDJc85TA7UQN6EfxRDmDOTU4CmN8GUA4Bnhtr/8OO/tuJ4xjCcyjKOGl73vbty5NgxOGaZrR//moM7cLhFJicm1OTkFBTyNilAHESH7Z1f/kwtLiykMMCy0iXH/JJBHpTn4LCZZbTpckkxZM0yyWBTBs20CAUFRfQbDCI+gtZPDxHSIp0dt1EYdsF0VkhBYbHZ9HCj9bpUIo4or6jYdHYyUD10SUYgJwIP84hcvniBI1U5uSgrVNYgKnZjWQ6owcGBZD88hDPnDEJNTUyqUHaO0XNbWS4PmOGAWEMOiUEUqpl1cpwr3iNOI5uQs5utragYJ4x+KC6vNEQSDB2y9ps35bnnn6eCXQN561+Pfe5pwUSIM2jCKi4tlRDoItm3Wj+mLk9PjgMZ8Q9uY3NMMGgbeXEebHBOJoQ3YAT7ALEuLiu1x+F14qtpmW6OCzBEd96+BUlRKogAqwC+hHNQ6V77+IqRjqqamseWDvActZUC2b13r5w/c4amwgGNEmghvNhcEKCk5949FJbTlWWnDdqLiU8Kioo046jNDkLetAUloLikzKZrHIdvsR4wSszUxJjxIkOhHKNoM9vNz83JzRttcvSp46zWZT569DUwUmkyNzI0OLjKgaLFYhqRUrKIOATmNs2pNGD0p4ueQL6DfsemegOdksx4GIyBR6koq6iga0tGpJmR0VzDCTLeJ3OXiDcyHiVJopheQLxRXFwiVYgryOCtHGxWCCnbvmOnXDp//qF+IEZlZefA+YJHi1HC+zRgTXS7GoEaGx5RFVXVG5vZFEnGmpi+a2gk0RWVVTZmham6NCMcPGCUSVdTL2CFQJ/CD4FztN6B/IZ03LkjB1ta0vpkvXZr7+3Ztw8e57QMww0HTx86fL6AdrncHKSaBR2mySojm+zCQC4MCS4oKkRGZM1AHai4vWaZPGhIqeBaIzPQ/iFSnBmIrERIixFhp27qwM8832xrNam6mtq6h2Y5s51zXVhUKPUI29tar5nAzbmfeYb1SiIG/lgsafIx2IdohfJQA709Vk1d/UPSkcmbtB3KRELuVSKpMjw4yMzMGoZltmRBKGklCBRtMx+mr8ksShCyUcLZxmymn613wSlhZLqIdAFKjhsyz7jDeEoYjyoNIrtmIV+qCuGfrIeTkvfwQAEbygnrP9emF7d+R9xO/klOTjazcTiwbRGJ340OzJzcu9sJa1NowuyN2vE+LUhtXZ3ch5VYXt448iQ+2+xzwvbJrBBm3Xpo5tN4QO/QwICC38Oodl2GPJgiNHaOktIy5ikVah+ocj1ssig5gWAWchQF0gAFx5lnDSS6EsG6LIYZE2SyIDGESZanULshEcx/NjQ1pX0GB2fmuRqKFjEHNrzFYM1Kko8yyId1oBTqnq4OKG9sz8RsIPljmJi1xrxnwuWyQl8LdBOaGTFUXTqNjB0buJ1ClKr6mnIgcosmBM8ElnmNdJ2baXsO7nv/5T9p1EdUAFtxX3rlFUMUlwKZlD5wSd3GLBWVIq3Aw0dSBbCIVFpWJi+89DKSPmuXHrZiY4LggktXxy2Tcw1kBfVrX38d5jPPKOga5E/WPUDPMqpysI5m6UFA0kwhD9KZLq4XpFyMJDAlP5SXp+uR54Tra3wI83g1BuUVs31aH3/2hP753/2NYhlwHlWzXXv2rmYE+lGaKGXDQ0PS1XUXyaH1lxTbDfb3yyAy7Sw9GNOZydQUDbfarsvk2BgzwLJn/0FdWl5Jzhvuk+FrDuRa4qjmzWmmEDEZ1IUcL3RNsiXyHtz6qBGPY8cid9VbCVN/iGJbL5I0anp6WmNrEa0KXHL4+NidSlFnNirzePHka/KLv/+JjCCUv4yw+tCRY8wzpNBgZx0QsyTY3XVP2q5fQ0qwewOlmBRROlkffvC+zM7MyvadO1GnzV9lkpkW/PjyRZYYjPr88kuvOPBSMp7EaZZuNKqh++AYTkAZD/HMAjcn3XaruHanNlHCBs2x8DyDgQWxqVV8rpjMIzvNiWB0yjQbU/Jws3UIWSt/MAs7g/2meEy/ggfXrwczUVxajlzoiLoEZjz/wkuwBrs1lJ+aRSIG+QYkdXtloL/PLBFKSJpTBorzL3mXSwPKLs3A6tpaOGzVzG1CUWbpwYE+uXD6FGdaZefl2dBT0nHrplhw/LjmCT+GCY3AtwjDIi0isbyEKJZMhORh9Sq9AskMqJjy0StGL4x5ir37QVkl39EIeWNqBB2hjwxD2BEOC5IlK2DKlFkuNKXGjDmii7ZIk6vDx57S7/z8H6Qd4vujv/xzfeDwUdRFwsgrzJuCEUsAcN7M8qEu4XLY6CBoPicj2f8+ksvMdzKfQsV6984tffnCWVba9N6Dh8kU6xZcfozDUXtUqvgkjFRm4DLcJrPIpEJPQvypvXxANwh50B0Y83EfrvKxSXRldMHULpAHyKTVJG0IJIHolAfWWPo5Ob19Z7PcuXlD993vUu+//QuZmJiAK1/FwZu+ZAA/j3OwPdc20njmMzk5yRKj3XbpnKna5ebl6527dptJArNhL5PJDKM6NkHFiYkuz0l+HjaUkwNGMuy7MMxyhQSSTr7+4E7MaVbBNySaSPBxBpcaoEnqPPXsCQlAjBfn56wbVy8hNTeBSTFyuSG41Q/WR5vCwfKhfePqBY2tDYwAFEuULEmwpOjQZAayCSOID0tGVHRaF+fgdSz2RHucb1ruhJzDJVaGUsXZbgnYk2YfBXCtT9lq6tPfSFz9tgbFugZiFI1NJuraxbNmJiFRhPVY8AzgZC9m3REQTttXz5/Ws1NTeHPEUuVVNdz2YF04/ZE6+9GHzLah9VZoVmayXVFk9c27K+CF1ngbQy5ZY67OOxj3CJEX5blUnndRIdlq1rch6DH+0T84cPiI7DlwGLnHILLY09aV86cU6h5I24ch8SYBuFWmYIbwNkNkBWFBf+LymV/pmclxvnnCw1i0iupaKS2vUJfOnVYXzp5hUfqRDEnASZuaGNU5nmVslWbEa6S8V8/Ge11//pbYf/hK8X7c2s/1M7uE2sewrYvK65QfxRy2fQx+wPEKwLKUmW6z01PY2rigxmByWXNFSg77OKCALZdhyKGWIya0T+FAqWFYbrffgosdl5XlMB05FKpv686bbdZKeNliIEgRph5h6ZFLgptiWIy6g8IVTTgK49jh7CO/1js0nbV7N87qQ9WLakcVXpMCEK0Tf6tm42+ZKOvfvVwAVqvX8MDN97la705rVzZMGTafmWlYD+zG9xTSbGbGuOtmCcoPm03U3PSUKSxhG5ONZC3TiLqwsJADg7M2qVhKvNXWqq9/fEWPjwyhot8l9+/eUZNjo6YMwI0wDdubFXb/mGoe+9Gb5IFcBTfQqS7UZSOo6CEjjyqbH0NazRFaFRTB9cz9c+rkkYDC62DkBOoK9nfqFu+3m9gkFrOveL2uNlvJ0dJ8t+yqCMv1jmu6qrbODGzjca//hDqTpvDQ0WNmT1fHnXbd1XEbPsYUl4wLVXbtwx6PyeFBRYeOXibN7gS2ENDhisEHYGaNZpx7urY17dA7d+8BrAoUp29qOnaUGuZZhuGp0tep29aIgMhFi0aHSh9/5vMmLACFaY7Qmey4cVm31Aregkz6F3h+Dbsl2tS3xTaS8a3Xc6LadsGWqufR0813vS7cGBXbV6yxl2q1u7n++Ne9C8cMViYf6YBqVVFTC+IKkb12QdnBIYqELeyjMM4VnTE6WSwwI/rFUgtCQVbpPQcOSctTn1N7DxzkJnvFaj1CcJNrnRqfQES7RNPL7QdmfxckBOUBj0Kx2yxLLtdUgZoCjhrwDZtS8c+eC6ksvEoFnR6Byv1+wLP44R+/tRAzklH/u72R3j9rPAW5ugFL3VKc51Zf3OuSn1z8UNdua9TYeZfm7rqj3vymYiG5tq5eyjCzzXv2wTTOCvQJd+4QNgvIehYxTTi8YnHnTj42q+Tm5yH7nc2i8qrYiHWQ5t17sby0PvOr9yFtk2bDC/wPsyxAr3Ea76F0Acajav+s5CG+mp2f1ZfPvCf/6mkPXAgzbOQvVBvq/2fKf384zCEkMzO4+N3nPAtebJuBAX8GEuKtwtuJvcMzcrFtVHbsQULGlMw3H/VmTzk1fIsP+oShv4IV4EYU9cKrX5WTX3vd4usVwaygC1KE2S/GVqZsKkIOkBORORncK8rNdEbBj0I5O1uW6FWyoFVeWY13sdzc28Gdg9gKUSbv/Oynsq94VH7z6RyLY4GrhU3r+ocea/GtHEgFaU8z47+/txT7968UT9hKN6LldnbYX++Vd8/34mXaqEZID6n/xCvG4ZMZGAfIJYSZUyxBUrynpybsyfEJvkTHxw4DMpngwOCZhWVumFGhnDzdi8APJtN4urQyZEhldR2Y5lHd8Bw622/aedaQ/qOvF7p8CMywYqAe5V2XxL5X9Qf9yc3rAJpmBjF8963JmdmTBdCu1n50KEQoax3b4ZUPLvTK9KKtS0rLnTzERkQSjDmouYmVXzg2MpIKEVEiYaCiH9SINaCka4VJJHiFNswemWSyVezjfJIQscLpGVJIUtj5vASznodkTe/9boXtCCmGpCUE+zYCku8eS/zR13Kt3CBeJAcjAKATWaHv1L7Zfd6BbejM/MLrge9WBRLB4Bsw3t/CeCqAUHUNr9g/Oh0TV9EBvb/laYh5vin5k7i1/Z3v6IaNaQHNijnzCzR1LDIZHRHKUVkhRMEoJvOZyUDBAiBmoOMk8E2SAR5MJ8ywUY6cbUSiZk8p/Im1eHU7otYP3n5LzUKHmIkAU2uqK/XRfeX6hR0jUpNvwxtBNy2oKdjf7Rm9+4MvfFvwUtyDYy1Q8+Tef2ss9nhd/wFz+3sYVAF0lb47GJGfX43pJf8OvX3vUaPdzT7w9DwlgZIJ+LDUqHdiHxa1P2eHTKHYUkJSx7q4U8+AEVEnQ3Fsomf0S32AmET3QAJmTXKGYdmDyUBzudl2XZ967x1E2BP4VQSlW5oCid96Nk81lmLLrhE0NQvz8xfKDv/n2jf7mbpYdaxaJs6TP/3H6eU/fDH7JirJNLe78AkUwNxuK1FwnsbkbveQzOGXEgLBkOPcpAfGZDLWsm5EbrRuW4OVgy2SYAQmH3vpyKUk89LtHZxrzqYt9QcZCPOIlF4uTTOusyAteOsAddQULNMVkJGudOmpyTGN+Mp+uSVo/5PPhazaYqx1QMMHv6xh/6VKRP6k7pt9k2vwma/rMoNPvvf27OK/eTmvDQxdhHQ1AVledhAMKXWpkGsRabkB6eoZww+C4Ic8QKgjJdzmBPPJvRnU+o8a9Ho0bXiPUsUtjsxgIatmmIFxaoT4qPfelo7Wc1LuHZRXW/ALDPtCqiCb70xTJKQX6+O/hl1Lf7r9D/onNkLwSGLHv18cCrsLXkTG8Jto/BQY4+X71GP4uYa2nqi+eN8rK95aad53UGrq6hXTgxVVldhGkPNI2BsRtel9SAD3iw8PDnDvqe7r6ZGOm9fFF+mV4w0xObjNi5+ZwLvo8KmwdKJgxEU4cn8Wj9r/2PRvu+Y3g70lgtu/vdsbKIs1Q96+AZ35LwCwjOEh30OdnI3pi3djcu4eXq4paJS9h1rgP9Ryu/OWYG9G3EbPqEyxSV/fun5VYjP35entUTnWlGRC6pdYqFBGIDT/21b2/4mv6DtgxPoZ6AwkWyZYf1usoaKd+XGvPAcV+QawPQ3GYB8zIp0ocpZTcX36dlSu9fqkoHoXMtaHEKyVP9LqZNCy6SWXA3Kj3DCD/RjXZHrwthyqXZETu7z4fQ4Pf6mFy4HWYgVNzyNt/gMVXz5VOTk0w7hjU+Cph1tmRiaw9u/XlQUt378Egb8PAuqwXx6UMOeode9YVL91eVGu9XulsmG/2fkPD5Ay+4lwJfEqjT2n+urF8zLUdV0O1sbxWzkhqSvxUjECrtELTNLc18r+QdxO/FXjG93jmTRv5foTE0hJ6Smpb3Ip75sY5isww+UA5sPysTCBugdMeff6srQPYi9n7R7ZufcQ9nSWJv2KpHndDDfiL75WEUEkO4p8xjUZ77sle6ti8hX8WBF/s8eoRhY+sD8XnyGx7J9hG8Zf1L/ZeReAjbO3FQZkttmMoMx2G16DKe7B0u2H4NJ8A0r2eZBRj7nKgvKy+LMNfeNR/RF+oubeuE8HipqkqmGXKimrhKLNNm8acWLhU+BE55G/dxEze8fHse988H67jkx3S1NxRJ3Yi72gYAKdaRCDeqkgZJU+yP8pFU/8Vd2pe1fVT+ThWuiGlD/84NdmhgOy7TulWbAkh+F0n4TYPofhNWKUObi28GKmHhyP6SvQYffGPRL1VUpeWRN2Ftdga2QRQnO/ycgjpNejQ30yO9qtvdFB2V4SU4cbfUYncOMa+AX2KloEzL4+C/i/XJmXKzv/Y2cyy+MQ8wnPnxoziJ8WZvC7VfnxYNZRfH0ODuIJLOdmjAJMwazD+gzjx9D4EzN3x1wyLyX4uQbsKS8qk5nJUVme7gH3xtT20oTsrfOqigIPMlgYdnJwC1BL7fh2GoLxgbUc/rjqW4MzGMAnWhJJkKv/f6rMcECTKb1/Updre717kDR4BpvLvgztdhDMyaWQ00/hjxx1DUf1XaSiRxf9Upa9ItvLRZrww2MF+EU14ycAIJrPQAKuQ0V+gHLVR/N2tGPvm/2znyYTHLqfCDMc4DzTaVuxcuoSlutz+FGalzCRx3GbWwK5hUov4ve25vBTeLkhl8r2p80jHglcZn0BeuSXiDAvZluBnpJvtiML/OSOJ84Mh/Se/1Hn90WtkqjtPgxL/BoQfxEDRhodaQ2wBYEoVSkV4CjufwD18FO8HH9NZekxZOJWRZcOzE/7/JkxwyH8b74uri+8UBRciefvwoaA34FJfg2rvgbroQ9M+Cl+TPDHkaWZ2zeuTi6//mtaBwfnVs//DywsLK/iGn+BAAAAAElFTkSuQmCC"
+            alt="Logo"
+            style="
+              position: absolute;
+              left: 50%;
+              top: 20px;
+              transform: translate(-50%, 0%);
+            "
+          />
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-widget="pushmenu"
+                role="button"
+                href="/ajouter/utilisateur"
+                ><i class="fas fa-bars"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-decoration-underline"
+                data-widget="control-sidebar"
+                data-slide="true"
+                role="button"
+                href
+                id="logout"
+                style="color: red"
+                >Déconnexion</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          <a
+            class="brand-link"
+            href="/"
+            style="display: block; text-align: center; margin: auto"
+            ><span class="brand-text">Amexpert Commande</span></a
+          >
+          <div
+            class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition"
+          >
+            <div class="os-resize-observer-host observed">
+              <div
+                class="os-resize-observer"
+                style="left: 0px; right: auto"
+              ></div>
+            </div>
+            <div
+              class="os-size-auto-observer observed"
+              style="height: calc(100% + 1px); float: left"
+            >
+              <div class="os-resize-observer"></div>
+            </div>
+            <div class="os-content-glue"></div>
+            <div class="os-padding">
+              <div class="os-viewport os-viewport-native-scrollbars-invisible">
+                <div class="os-content" style="height: 100%; width: 100%">
+                  <div
+                    class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="info">
+                      <a
+                        class="d-block text-decoration-underline"
+                        href="profile.html"
+                        id="name_user"
+                        ></a
+                      >
+                    </div>
+                  </div>
+                  <nav class="mt-2">
+                    <ul
+                      class="nav nav-pills nav-sidebar flex-column"
+                      data-widget="treeview"
+                      role="menu"
+                      data-accordion="false"
+                    >
+                      <li class="nav-item menu-open">
+                        <a class="nav-link" href="dashboard.html"
+                          ><i class="bi bi-speedometer2"></i>
+                          <p>Tableau de Bord</p></a
+                        >
+                      </li>
+                      <li class="sub-menu nav-item" style="display: inline;" id="rdv_link">
+                        <a class="nav-link" href="/utilisateurs"
+                          ><i class="bi bi-calendar-event"></i>
+                          <p>RDV/Commande</p>
+                          <i class="fas fa-angle-left right"></i
+                        ></a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a class="nav-link" href="rendez-vous.html"
+                              ><i class="bi bi-calendar-plus-fill"></i>
+                              <p>Ajoutez un rendez-vous</p></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="rendez-vous_list.html"
+                              ><i class="bi bi-list-columns-reverse"></i>
+                              <p>Liste des rendez-vous</p></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="sub-menu nav-item menu-is-opening menu-open" style="display: inline;" id="user_link">
+                        <a class="nav-link active" href="/utilisateurs"
+                          ><i class="bi bi-people"></i>
+                          <p>Utilisateurs</p>
+                          <i class="fas fa-angle-left right"></i
+                        ></a>
+                        <ul class="nav nav-treeview" style="display: block">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ajouter-un-utilisateur.html"
+                              ><i class="bi bi-person-plus"></i>
+                              <p>Ajouter un utilisateur</p></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link nav-active" href="list.html"
+                              ><i class="bi bi-list-columns-reverse"></i>
+                              <p>Liste des utilisateurs</p></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="sub-menu nav-item" id="param_link" style="display: inline;">
+                        <a class="nav-link" href="/utilisateurs"
+                          ><i class="bi bi-gear"></i>
+                          <p>Paramètres</p>
+                          <i class="fas fa-angle-left right"></i
+                        ></a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a class="nav-link" href="param-in-.html"
+                              ><i class="bi bi-gear-wide-connected"></i>
+                              <p>Type d'interventions</p></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="param-in-.html"
+                              ><i class="bi bi-building"></i>
+                              <p>Nature du bien</p></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"
+            >
+              <div class="os-scrollbar-track">
+                <div
+                  class="os-scrollbar-handle"
+                  style="width: 100%; transform: translate(0px, 0px)"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"
+            >
+              <div class="os-scrollbar-track">
+                <div
+                  class="os-scrollbar-handle"
+                  style="height: 31.7881%; transform: translate(0px, 0px)"
+                ></div>
+              </div>
+            </div>
+            <div class="os-scrollbar-corner"></div>
+          </div>
+        </aside>
+        <div class="content-wrapper">
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6"><h1>Ajouter un Utilisateur</h1></div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item active">Utilisateur</li>
+                    <li class="breadcrumb-item active">
+                      Ajouter un Utilisateur
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Ajouter un Utilisateur</h3>
+                      <center> <p id="error_form" style="color:red;display: none;"> <strong>Attention!!! Tous les champs sont obligatoires</strong></p></center> 
+                    </div>
+                    <form method="POST">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Login</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                placeholder="Le login"
+                                name="login"
+                                id="login"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Prénom</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                placeholder="Prénom de l'utilisateur"
+                                name="prenom"
+                                id="prenom"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Nom</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                placeholder="Nom de l'utilisateur"
+                                name="nom"
+                                id="nom"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email</label
+                              ><input
+                                type="email"
+                                class="form-control undefined"
+                                placeholder="Entre votre email"
+                                name="email"
+                                id="email"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Adresse</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                placeholder="Entre votre adresse"
+                                name="adresse"
+                                id="adresse"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Téléphone</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                placeholder="Entre le numéro de telephone"
+                                name="telephone"
+                                id="telephone"
+                              />
+                              <i id="erreurPhone" style="display: None;"><small style="color: rgb(248, 31, 31);">Le numéro de téléphone doit commencer par 0 et avoir 10 chiffres</small></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Mot de passe</label
+                          ><input
+                            type="password"
+                            class="form-control undefined"
+                            placeholder="Entre le mdp"
+                            name="mdp"
+                            id="mdp"
+                          />
+                        </div>
+
+                        <div class="form-group" id="as" style="display:none">
+                          
+                        </div>
+                        <small id="as_error" style="display: none;" ><i style="color:rgb(243, 70, 70);">L'agent de secteur est obligatoire pour ce type d'utilisateur</i></small>
+
+                        <div id="secteur" style="display: none;">
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Secteur primaire</label
+                                ><input
+                                  type="text"
+                                  class="form-control undefined"
+                                  placeholder="Secteur primaire"
+                                  name="secteur"
+                                  id="secteur_primaire"
+                                />
+                                <small id="s1_error" style="display: none;" ><i style="color:rgb(243, 70, 70);">Le secteur primaire est obligatoire pour cet utilisateur</i></small>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Secteur secondaire</label
+                                ><input
+                                  type="text"
+                                  class="form-control undefined"
+                                  placeholder="Secteur secondaire"
+                                  name="secteur1"
+                                  id="secteur_secondaire"
+                                />
+                                <small id="s2_error" style="display: none;" ><i style="color:rgb(243, 70, 70);">Le secteur secondaire est obligatoire pour cet utilisateur</i></small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="sal_bloc1" style="display: none;">
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Titre</label
+                                ><select class="form-control undefined" name="role" id="titre">
+                                  <option value="M">M</option>
+                                  <option value="Me">Me</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Fonction</label
+                                ><input
+                                  type="text"
+                                  class="form-control undefined"
+                                  placeholder="fonction "
+                                  name="fonction"
+                                  id="fonction"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="sal_bloc3" style="display: none;">
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Code</label>
+                                <input type="text" class="form-control undefined" placeholder="fonction secondaire"
+                                  name="code"
+                                  id="code"
+                                />
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Mobile</label
+                                ><input
+                                  type="number"
+                                  class="form-control undefined"
+                                  placeholder="fonction secondaire"
+                                  name="fonction"
+                                  id="mobile"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="sal_bloc2" style="display: none;">
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group" id="client">
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Company</label
+                                ><input
+                                  type="text"
+                                  class="form-control undefined"
+                                  placeholder="company"
+                                  name="company"
+                                  id="company"
+                                  readonly=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Role</label
+                          ><select class="form-control undefined" name="role" id="type_user">
+                            <option value="1">Administrateur</option>
+                            <option value="2">Agent Secteur</option>
+                            <option value="3">Agent Constat</option>
+                            <option value="4">Audit Planner</option>
+                            <option value="5">Client Pro</option>
+                            <option value="6">Client Par</option>
+                            <option value="7">Salarie</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a id="go" style="display: inline;" class="btn btn-primary" > Enregistrer </a>&nbsp;&nbsp;
+                        <a  id="leave" class="btn btn-danger">
+                          Annuler
+                        </a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      <br>
+        <footer class="main-footer" style="max-height: 57px; height: 57px">
+          <div class="float-right d-none d-sm-block"><b>Version</b> 1.0.0</div>
+          <strong
+            >Copyright © 2021
+            <a
+              href="https://amexpert.pro/"
+              rel="noopener noreferrer"
+              target="_blank"
+              style="color: black"
+              >Amexpert</a
+            >.</strong
+          >
+          Tous droits réservés.
+        </footer>
+        <div id="sidebar-overlay"></div>
+      </div>
+      <div class="Toastify" style=""></div>
+    </div>
+    <script src="assets/dist/js/jquery-cookie-master/src/jquery.cookie.js" ></script>
+    <script src="assets/dist/js/login.js"></script>
+    <script src="assets/dist/js/url.js" ></script>
+    <script  src="assets/dist/js/user.js" ></script>
+    <script  src="assets/dist/js/event_user.js" ></script>
+    <script>
+      checkLoged()
+      window.onload = function(){
+        loadNav()
+      }
+    </script>
+  </body>
+</html>

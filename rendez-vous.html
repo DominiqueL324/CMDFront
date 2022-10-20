@@ -1,0 +1,1208 @@
+<html lang="en" style="height: auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!--<script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>-->
+    <script
+      src="./assets/plugins/jquery/jquery.min.js"
+    ></script>
+    <script src="./assets/dist/js/adminlte.js"></script>
+    <title>Amexpert - Extranet</title>
+    <script defer="defer" src="/static/js/main.069f0b50.js"></script>
+    <link href="./assets/dist/css/adminlte.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/plugins/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style data-styled="active" data-styled-version="5.3.5"></style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/282.e4ab9df4.chunk.css"
+    />
+  </head>
+  <body
+    classname="hold-transition sidebar-mini layout-navbar-fixed"
+    style="height: auto"
+  >
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="wrapper">
+        <nav
+          class="main-header navbar navbar-expand navbar-white navbar-light relative"
+        >
+          <img
+          src="./assets/brand/logo.png"
+            alt="Logo"
+            style="
+              position: absolute;
+              left: 50%;
+              top: 20px;
+              transform: translate(-50%, 0%);
+            "
+          />
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-widget="pushmenu"
+                role="button"
+                href="/ajouter/un/rendez-vous"
+                ><i class="fas fa-bars"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-decoration-underline"
+                data-widget="control-sidebar"
+                data-slide="true"
+                role="button"
+                href
+                id="logout"
+                style="color: red"
+                >Déconnexion</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          <a
+            class="brand-link"
+            href="/"
+            style="display: block; text-align: center; margin: auto"
+            ><span class="brand-text">Amexpert Commande</span></a
+          >
+          <div
+            class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition"
+          >
+            <div class="os-resize-observer-host observed">
+              <div
+                class="os-resize-observer"
+                style="left: 0px; right: auto"
+              ></div>
+            </div>
+            <div
+              class="os-size-auto-observer observed"
+              style="height: calc(100% + 1px); float: left"
+            >
+              <div class="os-resize-observer"></div>
+            </div>
+            <div class="os-content-glue"></div>
+            <div class="os-padding">
+              <div class="os-viewport os-viewport-native-scrollbars-invisible">
+                <div class="os-content" style="height: 100%; width: 100%">
+                  <div
+                    class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="info">
+                      <a
+                        class="d-block text-decoration-underline"
+                        href="profile.html"
+                        id="name_user"
+                        ></a
+                      >
+                    </div>
+                  </div>
+                  <nav class="mt-2">
+                    <ul
+                                    class="nav nav-pills nav-sidebar flex-column"
+                                    data-widget="treeview"
+                                    role="menu"
+                                    data-accordion="false"
+                                  >
+                                    <li class="nav-item menu-open">
+                                      <a class="nav-link" href="dashboard.html"
+                                        ><i class="bi bi-speedometer2"></i>
+                                        <p>Tableau de Bord</p></a
+                                      >
+                                    </li>
+                                    <li class="sub-menu nav-item" style="display: inline;" id="rdv_link">
+                                      <a class="nav-link" href="/utilisateurs"
+                                        ><i class="bi bi-calendar-event"></i>
+                                        <p>RDV/Commande</p>
+                                        <i class="fas fa-angle-left right"></i
+                                      ></a>
+                                      <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="rendez-vous.html"
+                                            ><i class="bi bi-calendar-plus-fill"></i>
+                                            <p>Ajoutez un rendez-vous</p></a
+                                          >
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="rendez-vous_list.html"
+                                            ><i class="bi bi-list-columns-reverse"></i>
+                                            <p>Liste des rendez-vous</p></a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="sub-menu nav-item menu-is-opening menu-open" style="display: inline;" id="user_link">
+                                      <a class="nav-link active" href="/utilisateurs"
+                                        ><i class="bi bi-people"></i>
+                                        <p>Utilisateurs</p>
+                                        <i class="fas fa-angle-left right"></i
+                                      ></a>
+                                      <ul class="nav nav-treeview" style="display: block">
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="ajouter-un-utilisateur.html"
+                                            ><i class="bi bi-person-plus"></i>
+                                            <p>Ajouter un utilisateur</p></a
+                                          >
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link nav-active" href="list.html"
+                                            ><i class="bi bi-list-columns-reverse"></i>
+                                            <p>Liste des utilisateurs</p></a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="sub-menu nav-item" id="param_link " style="display: inline;">
+                                      <a class="nav-link" href="/utilisateurs"
+                                        ><i class="bi bi-gear"></i>
+                                        <p>Paramètres</p>
+                                        <i class="fas fa-angle-left right"></i
+                                      ></a>
+                                      <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="param-in-.html"
+                                            ><i class="bi bi-gear-wide-connected"></i>
+                                            <p>Type d'interventions</p></a
+                                          >
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="param-in-.html"
+                                            ><i class="bi bi-building"></i>
+                                            <p>Nature du bien</p></a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"
+            >
+              <div class="os-scrollbar-track">
+                <div
+                  class="os-scrollbar-handle"
+                  style="width: 100%; transform: translate(0px, 0px)"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"
+            >
+              <div class="os-scrollbar-track">
+                <div
+                  class="os-scrollbar-handle"
+                  style="height: 31.7881%; transform: translate(0px, 0px)"
+                ></div>
+              </div>
+            </div>
+            <div class="os-scrollbar-corner"></div>
+          </div>
+        </aside>
+        <div class="content-wrapper">
+          <section class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6"><h1>Ajouter un Rendez-vous</h1></div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item active">Rendez-vous</li>
+                    <li class="breadcrumb-item active">
+                      Ajouter un Rendez-vous
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Ajouter un Rendez-vous</h3>
+                    </div>
+                    <form>
+                      <div class="card-body">
+                        <div class="row mt-2 mb-3">
+                          <div class="col">
+                            <h5>INFORMATION PRINCIPALES</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="ref lot">Ref Lot</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                placeholder="Entrer votre Ref Lot"
+                                name="ref_lot"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="ref_edl">Ref RDV EDL</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                placeholder="Entrer votre Ref RDV EDL"
+                                name="ref_edl"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="intervention"
+                                >Type d'intervention *</label
+                              ><select
+                                class="form-control undefined"
+                                name="intervention"
+                              >
+                                <option value="1">Constat entrant</option>
+                                <option value="2">Constat sortant</option>
+                                <option value="3">Type_test</option>
+                                <option value="4">
+                                  Constat aprÃ¨s travaux
+                                </option>
+                                <option value="5">
+                                  Constat entrant meublé
+                                </option>
+                                <option value="6">
+                                  Constat sortant meublÃ©
+                                </option>
+                                <option value="7">intervention_test</option>
+                                <option value="8">intervention_test</option>
+                                <option value="9">test01 - vph</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="type de propriéte"
+                                >Nature du Bien</label
+                              ><select
+                                class="form-control undefined"
+                                name="type_propriete"
+                              >
+                                <option value="1">Appartement</option>
+                                <option value="2">Villa/Maison</option>
+                                <option value="3">Local commercial</option>
+                                <option value="4">Garage</option>
+                                <option value="5">Cave</option>
+                                <option value="6">Parties communes</option>
+                                <option value="7">Autre</option>
+                                <option value="8">Maison mobile</option>
+                                <option value="9">Bengalo</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 mb-3">
+                          <div class="col"><h5>INFORMATION DU RDV</h5></div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Client</label
+                              ><select
+                                class="form-control undefined"
+                                name="client"
+                              >
+                                <option value="1">DAVID DUART</option>
+                                <option value="3">CAROLE BARAT</option>
+                                <option value="4">Leslie MENGUY</option>
+                                <option value="5">ARNAUD SEGARD</option>
+                                <option value="6">ERIKA DELFOSSE</option>
+                                <option value="7">BENOIT DUPONT</option>
+                                <option value="8">IGOR DARONDEL</option>
+                                <option value="9">HIEN MAXENCE</option>
+                                <option value="10">CAILLAUD LAURET</option>
+                                <option value="11">NORGUET CAROLE</option>
+                                <option value="12">
+                                  PETILLAT DAMIEN ET ROBERT DELPHINE
+                                </option>
+                                <option value="13">ANGELINE TEMPLIER</option>
+                                <option value="15">SÃ©bestien BRACHET</option>
+                                <option value="16">Charlotte VACHERAND</option>
+                                <option value="17">Corinne BENOTEAU</option>
+                                <option value="18">Estelle DENIS</option>
+                                <option value="19">FREDERIC BONNAVE</option>
+                                <option value="20">LAMOUR SolÃ¨ne</option>
+                                <option value="21">Laurent DA COSTA</option>
+                                <option value="22">Laurent DA COSTA</option>
+                                <option value="23">Laurent DA COSTA</option>
+                                <option value="24">Soraya LAHRIDI</option>
+                                <option value="25">HASCOET Boris</option>
+                                <option value="26">Benjamin FRUCHET</option>
+                                <option value="27">Muriel BONNET</option>
+                                <option value="28">MICHEL BILLOT</option>
+                                <option value="29">Benoit CORMON</option>
+                                <option value="30">Alyssa WAYSSE</option>
+                                <option value="31">Laurent BRIENT</option>
+                                <option value="32">HÃ©lÃ¨ne LEDOEUFF</option>
+                                <option value="33">
+                                  cÃ©line &amp; Sylvie BRILHAUT &amp; NOVAIS
+                                </option>
+                                <option value="34">Jordan MONNERAYE</option>
+                                <option value="35">RICHARD Vanessa</option>
+                                <option value="36">KEREBEL DAMIEN</option>
+                                <option value="37">
+                                  Jean-Christophe DARPHIN
+                                </option>
+                                <option value="38">SÃ©bastien MARQUANT</option>
+                                <option value="39">GRIFFON Erwan</option>
+                                <option value="40">Thierry PENNANEC'H</option>
+                                <option value="41">LE MARTRET Erwan</option>
+                                <option value="42">KARINE HUBERT</option>
+                                <option value="43">DUMAS Christine</option>
+                                <option value="46">
+                                  SEBASTIEN BLANVILLAIN
+                                </option>
+                                <option value="47">Nancy GUINEHEUX</option>
+                                <option value="48">SELETTI Philippe</option>
+                                <option value="49">Thierry FOURNY</option>
+                                <option value="50">DIAIS</option>
+                                <option value="51">DIAIS</option>
+                                <option value="52">DIAIS</option>
+                                <option value="53">Quentin COLOMEZ</option>
+                                <option value="54">BOLAT Olivia</option>
+                                <option value="55">TOURNIER CÃ©line</option>
+                                <option value="57">CLYBOUW CÃ©dric</option>
+                                <option value="58">NEUET Didier</option>
+                                <option value="59">Sandra VANCAPEL</option>
+                                <option value="60">
+                                  SEBASTIEN ET GILLES BLANVILLAIN ET TEILLOL
+                                </option>
+                                <option value="62">Natacha ATLANI</option>
+                                <option value="63">GAUTHIER Bruno</option>
+                                <option value="64">JÃ©rÃ©my GARCIA</option>
+                                <option value="65">GARCIA Jean</option>
+                                <option value="67">HOARAU Laurent</option>
+                                <option value="68">LEHUGER ChloÃ©</option>
+                                <option value="69">GUSTAVE VÃ©ronique</option>
+                                <option value="70">FRANCOIS Marion</option>
+                                <option value="71">NORGUET Carole</option>
+                                <option value="72">Guillaume PAUTOUT</option>
+                                <option value="73">VERCELLETTO Antoine</option>
+                                <option value="74">BALESTRA Laurent</option>
+                                <option value="75">ISNER Peggy</option>
+                                <option value="76">BOBIN Gilles</option>
+                                <option value="77">Rudy PRINTEMPS</option>
+                                <option value="80">
+                                  StÃ©phanie PORRET JOUBERT
+                                </option>
+                                <option value="82">VRIGNON Michel</option>
+                                <option value="83">CAROLINE CHAREYRE</option>
+                                <option value="84">Wulwik Nathaniel</option>
+                                <option value="85">Alexis Kintgen</option>
+                                <option value="86">Sophie Lengrand</option>
+                                <option value="87">CANUT Jacques</option>
+                                <option value="88">BARBE Olivier</option>
+                                <option value="89">
+                                  LAURENCE THIBAULT GUILBAUD
+                                </option>
+                                <option value="90">THIBAUD GUILBAUD</option>
+                                <option value="91">SIMON Caroline</option>
+                                <option value="92">Christophe PERRIN</option>
+                                <option value="93">GREUX Charlotte</option>
+                                <option value="94">XXX LEFEVRE</option>
+                                <option value="95">Aurore PANNETIER</option>
+                                <option value="96">JOUAS Barbara</option>
+                                <option value="97">LUTZ Damien</option>
+                                <option value="98">Sylvie MORILLON</option>
+                                <option value="99">CADORET Linda</option>
+                                <option value="100">
+                                  SEBASTIEN BLANVILLAIN
+                                </option>
+                                <option value="101">SANDRINE BARBARA</option>
+                                <option value="102">
+                                  FREDERIC ET LIONEL TEBOUL et BISMUTH
+                                </option>
+                                <option value="103">Laurent DA COSTA</option>
+                                <option value="104">RONDONNET JOSIANNE</option>
+                                <option value="105">
+                                  HERACLES ET BOURGOIN
+                                </option>
+                                <option value="106">CHEVALIER BRIGITTE</option>
+                                <option value="107">
+                                  HERACLES NICOLAS &amp; BOURGOIN JEAN EMMANUEL
+                                </option>
+                                <option value="108">GERMA NATHALIE</option>
+                                <option value="109">GILLES TEILLOL</option>
+                                <option value="110">NATHALIE VANHECKE</option>
+                                <option value="111">VOISIN ISABELLE</option>
+                                <option value="112">AURELIE VINCENTS</option>
+                                <option value="113">PLOURDEAU ARNAUD</option>
+                                <option value="114">WISPELAERE Manuel</option>
+                                <option value="115">CHENEDE FREDERIC</option>
+                                <option value="116">FAURE FABIAN</option>
+                                <option value="117">DAVID CRAUNOT</option>
+                                <option value="118">LECLERCQ ETIENNE</option>
+                                <option value="119">
+                                  JEAN CHRISTOPHE LACOSTE
+                                </option>
+                                <option value="120">
+                                  LAETITIA BERNAERT-GROHARD
+                                </option>
+                                <option value="121">PATRICIA ADAM</option>
+                                <option value="122">
+                                  MURIELLE VAIGREVILLE
+                                </option>
+                                <option value="123">YEUNG StÃ©phanie</option>
+                                <option value="124">JEANJEAN GUILLAUME</option>
+                                <option value="125">MOUNIER CELINE</option>
+                                <option value="126">
+                                  SARRADE-LOUCHEUR CEDRID
+                                </option>
+                                <option value="127">TALBAN JOSEPH</option>
+                                <option value="128">CARPENTIER AURELIE</option>
+                                <option value="129">SEBASTIEN GARCIA</option>
+                                <option value="130">Yannick SOUAL</option>
+                                <option value="131">XAVIER BROCHET</option>
+                                <option value="132">JEROME M MERON</option>
+                                <option value="133">
+                                  CHARLOTTE GUILLOTEAU
+                                </option>
+                                <option value="134">PONCHE</option>
+                                <option value="135">VASOVIC Slobodan</option>
+                                <option value="136">LAURENT HOARAU</option>
+                                <option value="137">Nicolas Denis</option>
+                                <option value="138">LAURENT DA COSTA</option>
+                                <option value="139">FOSSE MATHIEU</option>
+                                <option value="140">LATOUR STEVE</option>
+                                <option value="141">BLOT PIERRE YVES</option>
+                                <option value="142">
+                                  CÃ©lian MoullÃ©-Berteaux
+                                </option>
+                                <option value="143">Yannick SOUAL</option>
+                                <option value="144">DES FONTAINES Fleur</option>
+                                <option value="145">MALIKA BOUAZOUNE</option>
+                                <option value="146">DUFOUR Kathleen</option>
+                                <option value="147">FRANCESHI MARIE</option>
+                                <option value="148">XXX DESCAVES</option>
+                                <option value="149">
+                                  CATHERINE BRYNDZA CATHERINE
+                                </option>
+                                <option value="150">
+                                  Philippe et Sophie Poincet
+                                </option>
+                                <option value="151">PAUL Bertrand</option>
+                                <option value="152">LEFEBVRE REMI</option>
+                                <option value="153">VALERIE HUGOT</option>
+                                <option value="154">DE POMMEROL AUDE</option>
+                                <option value="155">DE POMMEROL AUDE</option>
+                                <option value="156">RECOING JULIEN</option>
+                                <option value="157">CHARLOTTE GUILLOU</option>
+                                <option value="158">
+                                  TEST TEST XD AGENCE TEST
+                                </option>
+                                <option value="159">BAZARD CORINNE</option>
+                                <option value="160">STEPHANIE BOUFFIER</option>
+                                <option value="161">BENOIT PECOT</option>
+                                <option value="162">ELODIE BOUET</option>
+                                <option value="163">MARINE RIDEL</option>
+                                <option value="164">STEPHANE LAMOTTE</option>
+                                <option value="165">GISELE DEPLAET</option>
+                                <option value="166">BERTRAND DALIN</option>
+                                <option value="167">ANGELIQUE ROSSIGNOL</option>
+                                <option value="168">MARIANNE CADEAU</option>
+                                <option value="169">AURELIE VRIGNAULT</option>
+                                <option value="170">
+                                  SEBASTIEN &amp; SOPHIE CACHEUX &amp; HERVE
+                                </option>
+                                <option value="171">FABIENNE DEMARE</option>
+                                <option value="172">CORINNE CATTIAUX</option>
+                                <option value="173">PHILIPPE PICAVEZ</option>
+                                <option value="174">DELPHINE PERRILLAT</option>
+                                <option value="175">
+                                  MARIE-CHRISTINE COPPOLA
+                                </option>
+                                <option value="176">HONORINE ANDRE</option>
+                                <option value="177">BARBARA FALL</option>
+                                <option value="178">
+                                  FATMA TRIKI FATMA TRIKI
+                                </option>
+                                <option value="179">Benjamin Jakubowsky</option>
+                                <option value="180">Carole CRETIER</option>
+                                <option value="181">Pascal FRANCHETEAU</option>
+                                <option value="182">Christine SANROMA</option>
+                                <option value="183">Christine TESTARD</option>
+                                <option value="184">THIERRY LESCURE</option>
+                                <option value="185">PIERRE YVES PINAULT</option>
+                                <option value="186">PAULINE HONG</option>
+                                <option value="187">BASTIEN BACABARA</option>
+                                <option value="188">
+                                  JACQUES &amp; A TABONE &amp; HAFNER
+                                </option>
+                                <option value="189">
+                                  JACQUES &amp; A TABONE &amp; HAFNER
+                                </option>
+                                <option value="190">PHILIPPE GANDILLON</option>
+                                <option value="191">JACQUES BATARDIERE</option>
+                                <option value="192">ERIC FRANQUES</option>
+                                <option value="193">
+                                  STEPHANIE GRIMMELPONT
+                                </option>
+                                <option value="194">
+                                  Anne-Charlotte &amp; DÃ©borah D'HAUSSY &amp;
+                                  FLAMENT
+                                </option>
+                                <option value="195">Marine ROGER</option>
+                                <option value="196">StÃ©phane BEDDELEEM</option>
+                                <option value="197">STEPHANE NARDOT</option>
+                                <option value="198">STEPHANE NARDOT</option>
+                                <option value="199">GREGORY DUGUET</option>
+                                <option value="200">BRICE MOUTHINO</option>
+                                <option value="201">Christophe RAMBEAU</option>
+                                <option value="202">VALERIE RODET RIEU</option>
+                                <option value="203">CHRISTOPHE ROCHON</option>
+                                <option value="204">Marianne FONTENEAU</option>
+                                <option value="205">SONIA BLOUIN</option>
+                                <option value="206">DAVID AZEMA</option>
+                                <option value="207">ALEXANDRE GODEFROY</option>
+                                <option value="208">JEAN MARIE COURTIN</option>
+                                <option value="209">YVETTE BLAIS</option>
+                                <option value="210">
+                                  ANAIS ET HACENE RIBEIRO ET ZITOUNI
+                                </option>
+                                <option value="211">JEAN MICHEL DELMAS</option>
+                                <option value="212">XD XD</option>
+                                <option value="213">FRANCK PAYEN</option>
+                                <option value="214">GUILLAUME ROUSSEAU</option>
+                                <option value="215">
+                                  SEBASTIEN BLANVILLAIN
+                                </option>
+                                <option value="216">
+                                  DIXIE DESNOYERS DE BIEVILLE
+                                </option>
+                                <option value="217">JOSEPH GOUT</option>
+                                <option value="218">
+                                  JEAN JACQUES GAUDICHE
+                                </option>
+                                <option value="219">
+                                  SEBASTIEN BLANVILLAIN
+                                </option>
+                                <option value="220">BERENGERE REGLAT</option>
+                                <option value="221">MARC SALERNO</option>
+                                <option value="222">
+                                  THIERRY ET MARIE PIERRE COUTURIER
+                                </option>
+                                <option value="223">MARC PENN</option>
+                                <option value="224">MARINA BRUNEAU</option>
+                                <option value="225">REMY REZAG</option>
+                                <option value="226">PIERRE SARRAZIN</option>
+                                <option value="227">EMILIE SECHER</option>
+                                <option value="228">
+                                  LUDOVIC ET ALEXIS TOURNEUX ET VAUGEOIS
+                                </option>
+                                <option value="229">CHRISTINE LOGETTE</option>
+                                <option value="230">VANESSA DUCROUX</option>
+                                <option value="231">
+                                  DAMIEN - DELPHINE PETILLAT - ROBERT
+                                </option>
+                                <option value="232">ERIC LAURENT</option>
+                                <option value="233">ERIC LAURENT</option>
+                                <option value="234">FranÃ§ois LE FLOC'H</option>
+                                <option value="235">JEAN MARC MOREL</option>
+                                <option value="236">ANNE LAURE MARIE</option>
+                                <option value="237">Vincent DEHEUL</option>
+                                <option value="238">CYRIL SAVOUREUX</option>
+                                <option value="239">PARTICULIER DARDE</option>
+                                <option value="240">BRIGITTE LAGUEYT</option>
+                                <option value="241">MATHILDE GAUTIER</option>
+                                <option value="242">BENJAMIN FRUCHET</option>
+                                <option value="243">
+                                  SANDRINE MATHONNEAU-PARENT
+                                </option>
+                                <option value="244">
+                                  MURIELLE VAIGREVILLE
+                                </option>
+                                <option value="245">
+                                  ALAIN / ANNE-CECILE CLAVIER
+                                </option>
+                                <option value="246">PATRICE BLOT</option>
+                                <option value="247">JESSICA MOHAMED</option>
+                                <option value="248">ERIC BERNARD</option>
+                                <option value="249">CHRISTINE BERNARD</option>
+                                <option value="250">FABIAN FAURE</option>
+                                <option value="251">JEAN JOEL PERRIER</option>
+                                <option value="252">
+                                  OLIVIER &amp; LAIETITIA DETOC
+                                </option>
+                                <option value="253">
+                                  SEBASTIEN BLANVILLAIN
+                                </option>
+                                <option value="254">
+                                  BENEDICTE ET ALIX BOIVIN-CHAMPEAUX
+                                </option>
+                                <option value="255">
+                                  MARIE HELENE BLANCHE
+                                </option>
+                                <option value="256">DAVID CHARPENTIER</option>
+                                <option value="257">Nathalie CAMBERLIN</option>
+                                <option value="258">
+                                  MARIE HELENE BLANCHE
+                                </option>
+                                <option value="259">CLAIRE CHAVY</option>
+                                <option value="260">CLAIRE GLOAGUEN</option>
+                                <option value="261">AGNES MORANTIN</option>
+                                <option value="262">VINCENT PHUNG</option>
+                                <option value="263">LYSE HANGOUET</option>
+                                <option value="264">Lyse HangouÃ«t</option>
+                                <option value="265">GUY COULAY</option>
+                                <option value="266">PERRINE HANSEN</option>
+                                <option value="267">
+                                  SEBASTIEN LUDMILA EPAGNOUX
+                                </option>
+                                <option value="268">LAURENT BOURGE</option>
+                                <option value="269">CHRISTINE LEFEVRE</option>
+                                <option value="270">JEAN-MICHEL MANGANI</option>
+                                <option value="271">JEAN-MICHEL MANGANI</option>
+                                <option value="272">THOMAS LESTIENNE</option>
+                                <option value="273">CHARLENE BRAULT</option>
+                                <option value="274">MARIE CLAUDE DARY</option>
+                                <option value="275">ETIENNE MEISSONNIER</option>
+                                <option value="276">GEOFFREY GRZYWACZ</option>
+                                <option value="277">
+                                  SEBASTIEN / VALERIE BLANVILLAIN / FREMINET
+                                </option>
+                                <option value="278">
+                                  JEAN CLAUDE BORDELAIS
+                                </option>
+                                <option value="279">FRANCOIS BOURIAUD</option>
+                                <option value="280">PATRICK ARNOULT</option>
+                                <option value="281">
+                                  CATHY ET ETIENNE BROIS
+                                </option>
+                                <option value="282">
+                                  CATHY ET ETIENNE BROIS
+                                </option>
+                                <option value="283">
+                                  CATHY ET ETIENNE BROIS
+                                </option>
+                                <option value="284">
+                                  MICHEL DE LA SAYETTE
+                                </option>
+                                <option value="285">JULIETTE TEILLET</option>
+                                <option value="286">EMMANUELLA ENFLORE</option>
+                                <option value="287">GERALD BEURAI</option>
+                                <option value="288">AURELIE VRIGNAULT</option>
+                                <option value="289">CHRISTOPHE QUILLO</option>
+                                <option value="290">YVETTE GERARD BLAIS</option>
+                                <option value="291">
+                                  GREGOIRE ARTIGUELOUVE
+                                </option>
+                                <option value="292">GERALDINE BROUSSE</option>
+                                <option value="293">MARC IFFENECKER</option>
+                                <option value="294">CHARLES COSTANTINI</option>
+                                <option value="295">
+                                  MATHIEU CORINNE BLAIS
+                                </option>
+                                <option value="296">
+                                  STEPHANIE EMMANUEL LECUYER
+                                </option>
+                                <option value="297">LUC BONIDAN</option>
+                                <option value="298">FREDERIC OUVRARD</option>
+                                <option value="299">THIERRY COCHIN</option>
+                                <option value="300">ALEXANDRE BOITEAU</option>
+                                <option value="302">VIRGINIE RIALLOT</option>
+                                <option value="304">OLIVIER ROMEFORT</option>
+                                <option value="305">
+                                  TEST PRENOM TEST NOM
+                                </option>
+                                <option value="306">MARINA AUBRY</option>
+                                <option value="307">VALERIE THÃ‰NAULT</option>
+                                <option value="308">Arnaud VILPELLET</option>
+                                <option value="309">Franck SANS</option>
+                                <option value="310">PASCAL LELAN</option>
+                                <option value="311">
+                                  MURIELLE VAIGREVILLE
+                                </option>
+                                <option value="312">GREGORY POINSOT</option>
+                                <option value="313">LUDOVIC BOUTAILLIER</option>
+                                <option value="314">CATHERINE FERRE</option>
+                                <option value="315">THOMAS FERRE</option>
+                                <option value="316">THIERRY COCHIN</option>
+                                <option value="317">
+                                  ISABELLE TOHIER MARIA
+                                </option>
+                                <option value="318">CHRISTINE PIMENTA</option>
+                                <option value="461">string string</option>
+                                <option value="462">prenom app</option>
+                                <option value="463">prenom app</option>
+                                <option value="464">mlkjh qsdfgh</option>
+                                <option value="465">TEST fgh,</option>
+                                <option value="466">EY DFGH</option>
+                                <option value="467">
+                                  TESTCLPRO01 TESTCLPRO011
+                                </option>
+                                <option value="468">
+                                  TESTCLIENTPAR TESTCLIENTPAR
+                                </option>
+                                <option value="469">clientpro nom</option>
+                                <option value="470">
+                                  clientprof clientprof
+                                </option>
+                                <option value="471">clientpar clientpar</option>
+                                <option value="472">cprop cpron</option>
+                                <option value="473">Asta Yuno</option>
+                                <option value="474">Uriel Uchiwa</option>
+                                <option value="475">test tesi</option>
+                                <option value="476">testpro testui</option>
+                                <option value="477">clpro clpro</option>
+                                <option value="478">hopecpro hopecpro</option>
+                                <option value="479">
+                                  cedrique pascal DELANEAU
+                                </option>
+                                <option value="480">cedrique SADIO</option>
+                                <option value="481">poisson laurette</option>
+                                <option value="482">CLIENT01 CLIENT01</option>
+                                <option value="483">
+                                  clientcedric clientcedric
+                                </option>
+                                <option value="484">Poire Géranium</option>
+                                <option value="485">Noisette Macadamia</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Date</label
+                              ><input
+                                type="date"
+                                min="2022-10-14T00:44:24.862Z"
+                                class="form-control undefined"
+                                name="date"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Passeur</label
+                              ><select
+                                class="form-control undefined"
+                                name="passeur"
+                              ></select>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1"
+                                >Nom de l'agent Amexpert rattaché</label
+                              ><select
+                                class="form-control undefined"
+                                name="agent"
+                              >
+                                <option value="49">
+                                  en attente agent rÃ©dacteur
+                                </option>
+                                <option value="79">MICKAEL HUCHELOUP</option>
+                                <option value="80">NICOLAS ARFAUX</option>
+                                <option value="81">MURIELLE NEMGNE</option>
+                                <option value="82">LEA RABOTEAU</option>
+                                <option value="83">PHILIPPE VILCOT</option>
+                                <option value="92">string string</option>
+                                <option value="98">qfds qdfq</option>
+                                <option value="99">as asecteur</option>
+                                <option value="102">agent233 agent233</option>
+                                <option value="104">
+                                  Yvan pro Cedric Garnier
+                                </option>
+                                <option value="107">test testn</option>
+                                <option value="110">Loperes Loperes</option>
+                                <option value="114">agentp agentn</option>
+                                <option value="119">
+                                  Agentsecteur5 Agentsecteur5
+                                </option>
+                                <option value="120">TESLA ROSALIE</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 mb-3">
+                          <div class="col">
+                            <h5>COORDONNEES DU LOCATAIRE</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="nom du locataire">Nom</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="nom_locataire"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="prenom du locataire">Prénom</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="prenom_locataire"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="contact du locataire"
+                                >Numéro de Téléphone</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="telephone_locataire"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="email du locataire">Email</label
+                              ><input
+                                type="email"
+                                class="form-control undefined"
+                                name="email_locataire"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="identité de l'ancien locataire"
+                                >Identité de l'ancien locataire</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="adresse_ancien_locataire"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 mb-3">
+                          <div class="col"><h5>SPECIFICITES DU BIEN</h5></div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="surface du bien"
+                                >Surface du bien - (m<sup>2</sup>)</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="surface_propriete"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="Type">Type</label
+                              ><select
+                                class="form-control undefined"
+                                name="type"
+                              >
+                                <option value="studio">STUDIO</option>
+                                <option value="studio meublé">
+                                  STUDIO MEUBLE
+                                </option>
+                                <option value="F1">F1</option>
+                                <option value="F1 Bis">F1 Bis</option>
+                                <option value="F1 Bis Meublé">
+                                  F1 Bis Meublé
+                                </option>
+                                <option value="F2">F2</option>
+                                <option value="F2 meuble">F2 Meublé</option>
+                                <option value="F3">F3</option>
+                                <option value="F3 meuble">F3 Meublé</option>
+                                <option value="F4">F4</option>
+                                <option value="F4 meuble">F4 Meublé</option>
+                                <option value="F5">F5</option>
+                                <option value="F5 meuble">F5 Meublé</option>
+                                <option value="F6">F6</option>
+                                <option value="F6 meuble">F6 Meublé</option>
+                                <option value="F7">F7</option>
+                                <option value="F7 meuble">F7 Meublé</option>
+                                <option value="F8">F8</option>
+                                <option value="F8 meuble">F8 Meublé</option>
+                                <option value="T1">T1</option>
+                                <option value="T1 meuble">T1 Meublé</option>
+                                <option value="T2">T2</option>
+                                <option value="T2 meuble">T2 Meublé</option>
+                                <option value="T3">T3</option>
+                                <option value="T3 meuble">T3 Meublé</option>
+                                <option value="T4">T4</option>
+                                <option value="T4 meuble">T4 Meublé</option>
+                                <option value="T5">T5</option>
+                                <option value="T5 meuble">T5 Meublé</option>
+                                <option value="T6">T6</option>
+                                <option value="T6 meuble">T6 Meublé</option>
+                                <option value="T7">T7</option>
+                                <option value="T7 meuble">T7 Meublé</option>
+                                <option value="T8">T8</option>
+                                <option value="T8 meuble">T8 Meublé</option>
+                                <option value="T9">T9</option>
+                                <option value="T9 meuble">T9 Meublé</option>
+                                <option value="T10">T10</option>
+                                <option value="T10 meuble">T10 Meublé</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="etage">Etage</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="numero_sol_propriete"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="N° du logement">N° Logement</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="numero_propriete"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="numéro du parking">N° Parking</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="numero_parking_propriete"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="numéro de la cave">N° Cave</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="numero_cave_propriete"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 mb-3">
+                          <div class="col"><h5>LOCALISATION DU BIEN</h5></div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="adresse de la propriéte"
+                                >Adresse</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="adresse_propriete"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="adresse complementaire"
+                                >Complément d'adresse</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="adresse_complementaire_propriete"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="code postal">Code Postal</label
+                              ><input
+                                type="number"
+                                min="0"
+                                class="form-control undefined"
+                                name="code_postal_propriete"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="Ville">Ville</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="ville_propriete"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 mb-3">
+                          <div class="col">
+                            <h5>COORDONNEES DU PROPRIETAIRE</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="nom du bailleure">Nom</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="nom_bailleur"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="prenom du bailleure">Prénom</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="prenom_bailleur"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="email du bailleure">Email</label
+                              ><input
+                                type="email"
+                                class="form-control undefined"
+                                name="email_bailleur"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="reference">Reférence</label
+                              ><input
+                                type="text"
+                                class="form-control undefined"
+                                name="reference_bailleur"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-2 mb-3">
+                          <div class="col"><h5>INDICATION DIVERSE</h5></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1"
+                                >Liste des documents</label
+                              ><textarea
+                                class="form-control undefined"
+                                name="list_documents"
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1"
+                                >Consignes particulière</label
+                              ><textarea
+                                class="form-control undefined"
+                                name="consignes_part"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1"
+                              >Informations diverses</label
+                            ><textarea
+                              class="form-control undefined"
+                              name="info_diverses"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">
+                          Enregistrer
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <footer class="main-footer" style="max-height: 57px; height: 57px">
+          <div class="float-right d-none d-sm-block"><b>Version</b> 1.0.0</div>
+          <strong
+            >Copyright © 2021
+            <a
+              href="https://amexpert.pro/"
+              rel="noopener noreferrer"
+              target="_blank"
+              style="color: black"
+              >Amexpert</a
+            >.</strong
+          >
+          Tous droits réservés.
+        </footer>
+        <div id="sidebar-overlay"></div>
+      </div>
+      <div class="Toastify" style=""></div>
+    </div>
+    <script src="assets/dist/js/jquery-cookie-master/src/jquery.cookie.js" ></script>
+    <script src="assets/dist/js/login.js" ></script>
+    <script src="assets/dist/js/url.js" ></script>
+    <script src="assets/dist/js/user.js" ></script>
+    <script src="assets/dist/js/event_user.js" ></script>
+    <script>
+        getUserToEdit();
+        checkLoged()
+        loadNav()
+    </script>
+  </body>
+</html>
