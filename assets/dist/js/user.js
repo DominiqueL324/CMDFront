@@ -604,7 +604,7 @@ function editUser(cas,prof=0){
         success: function (response) {
             alert('Modification okay')
             clearForm()
-            //window.location.replace("list.html")
+            window.location.replace("list.html")
         },
         error: function (response) {
             console.log(response)

@@ -34,6 +34,9 @@
       type="text/css"
       href="/static/css/282.e4ab9df4.chunk.css"
     />
+    <link href='assets/plugins/fullcalendar/main.css' rel='stylesheet' />
+    <script src='assets/plugins/fullcalendar/main.js'></script>
+    <script src='assets/plugins/fullcalendar/locales-all.js'></script>
   </head>
   <body
     classname="hold-transition sidebar-mini layout-navbar-fixed"
@@ -331,7 +334,12 @@
                 </div>
               </div>
               <div class="row">
-                 <!-- calendar -->
+                <div class="col-md-12" >
+                  
+                  <div class="card" style="padding: 15;">
+                    <div id='calendar'></div>
+                  </div>
+                </div>
               </div>
              
             </div>
@@ -358,8 +366,10 @@
     <script  src="assets/dist/js/login.js" ></script>
     <script  src="assets/dist/js/url.js" ></script>
     <script  src="assets/dist/js/user_list.js" ></script>
+    <script  src="assets/dist/js/dashboard.js" ></script>
     <script>
       checkLoged()
+      configCal()
       window.onload = function(){
         loadNav()
       }

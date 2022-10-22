@@ -18,9 +18,9 @@
     <script
       src="./assets/plugins/jquery/jquery.min.js"
     ></script>
+    <script src="./assets/dist/js/adminlte.js"></script>
     <link rel="stylesheet" href="assets/dist/css/jquery.progressbar.css">
     <script src="assets/dist/css/jquery.progressbar.js"></script>
-    <script src="./assets/dist/js/adminlte.js"></script>
     <title>Amexpert - Extranet</title>
     <script defer="defer" src="/static/js/main.069f0b50.js"></script>
     <link href="./assets/dist/css/adminlte.css" rel="stylesheet" />
@@ -229,12 +229,12 @@
           <section class="content-header">
             <div class="container-fluid">
               <div class="row mb-2">
-                <div class="col-sm-6"><h1>Ajouter un Rendez-vous</h1></div>
+                <div class="col-sm-6"><h1>Modifier un Rendez-vous</h1></div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item active">Rendez-vous</li>
                     <li class="breadcrumb-item active">
-                      Ajouter un Rendez-vous
+                      Modifier un Rendez-vous
                     </li>
                   </ol>
                 </div>
@@ -274,7 +274,7 @@
                             <div class="form-group">
                               <label for="ref_edl">Ref RDV EDL</label
                               ><input
-                                type="number"
+                                type="text"
                                 min="0"
                                 class="form-control undefined"
                                 placeholder="Entrer votre Ref RDV EDL"
@@ -332,6 +332,32 @@
                             </div>
                           </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                  <label for="nom du locataire">Planneur</label
+                                  ><input
+                                    type="text"
+                                    class="form-control undefined"
+                                    name="planneur"
+                                    id="planneur"
+                                    readonly
+                                  />
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="form-group">
+                                  <label for="prenom du locataire">Agent de constat</label
+                                  ><input
+                                    type="text"
+                                    class="form-control undefined"
+                                    name="constat"
+                                    id="constat"
+                                    readonly
+                                  />
+                                </div>
+                              </div>
+                        </div>
                         <div class="row mt-2 mb-3">
                           <div class="col">
                             <h5>COORDONNEES DU LOCATAIRE</h5>
@@ -367,7 +393,7 @@
                               <label for="contact du locataire"
                                 >Numéro de Téléphone</label
                               ><input
-                                type="number"
+                                type="text"
                                 min="0"
                                 class="form-control undefined"
                                 name="telephone_locataire"
@@ -680,7 +706,7 @@
                         </div>
                       </div>
                       <div class="card-footer">
-                        <a id="goSave" class="btn btn-primary">
+                        <a id="goEdit" class="btn btn-primary">
                           Enregistrer
                         </a>&nbsp;&nbsp;
                         <a id="goLeave" class="btn btn-danger">
@@ -708,24 +734,19 @@
           >
           Tous droits réservés.
         </footer>
-        <div id="sidebar-overlay"></div>
+        <div id="sidebar-overlay" ></div>
       </div>
       <div class="Toastify" style=""></div>
     </div>
     <script src="assets/dist/js/jquery-cookie-master/src/jquery.cookie.js" ></script>
     <script src="assets/dist/js/login.js" ></script>
     <script src="assets/dist/js/url.js" ></script>
-    <script src="assets/dist/js/user.js" ></script>
-    <script src="assets/dist/js/event_user.js" ></script>
     <script src="assets/dist/js/rdv_add.js" ></script>
     <script>
         checkLoged()
-        
-        getClient()
-        getAgent()
-        getInterventionandPropriete()
+        getRdvToEdit()
         window.onload = function(){
-            loadNav()
+          loadNav()
         }
     </script>
   </body>

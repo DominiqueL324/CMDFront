@@ -58,7 +58,7 @@ function getAllUsers(){
                             <span class="'+classe+'" style=" cursor: pointer; text-decoration: underline;border-radius: 4px;" >'+cas_+'</span>\
                         </td>\
                         <td>\
-                            <button onclick=\'goWhereEdit('+ id_toget +',"' +  elt["groups"][0]["group"] + '"' +')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></button>&nbsp;<a href="#"><i class="bi bi-eye" style="color: rgb(136, 102, 119)"></i></a>\
+                            <a onclick=\'goWhereEdit('+ id_toget +',"' +  elt["groups"][0]["group"] + '"' +')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></a>&nbsp;<a href="#"><i class="bi bi-eye" style="color: rgb(136, 102, 119)"></i></a>\
                         </td>\
                     </tr>'
                 )
@@ -164,7 +164,7 @@ function code(url_){
                             <span class="'+classe+'" style=" cursor: pointer; text-decoration: underline;border-radius: 4px;" >'+cas_+'</span>\
                         </td>\
                         <td>\
-                            <button onclick=\'goWhereEdit('+ id_toget +',"' +  elt["groups"][0]["group"] + '"' +')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></button>&nbsp;<a href="#"><i class="bi bi-eye" style="color: rgb(136, 102, 119)"></i></a>\
+                            <a  onclick=\'goWhereEdit('+ id_toget +',"' +  elt["groups"][0]["group"] + '"' +')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></a>&nbsp;<a href="#"><i class="bi bi-eye" style="color: rgb(136, 102, 119)"></i></a>\
                         </td>\
                     </tr>'
                 )

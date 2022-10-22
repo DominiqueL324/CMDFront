@@ -1,0 +1,940 @@
+<html lang="en" style="height: auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!--<script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>-->
+    <script
+      src="./assets/plugins/jquery/jquery.min.js"
+    ></script>
+    <link rel="stylesheet" href="assets/dist/css/jquery.progressbar.css">
+
+    <script src="./assets/dist/js/adminlte.js"></script>
+    <title>Amexpert - Extranet</title>
+    <script defer="defer" src="/static/js/main.069f0b50.js"></script>
+    <link href="./assets/dist/css/adminlte.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/plugins/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/dist/css/progress.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style data-styled="active" data-styled-version="5.3.5"></style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/282.e4ab9df4.chunk.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href='assets/plugins/fullcalendar/main.css' rel='stylesheet' />
+    <script src='assets/plugins/fullcalendar/main.js'></script>
+    <script src='assets/plugins/fullcalendar/locales-all.js'></script>
+  </head>
+  <body
+    classname="hold-transition sidebar-mini layout-navbar-fixed"
+    style="height: auto"
+  >
+    <div id="root">
+      <div class="wrapper">
+        <nav
+          class="main-header navbar navbar-expand navbar-white navbar-light relative"
+        >
+          <img
+          src="./assets/brand/logo.png"
+            alt="Logo"
+            style="
+              position: absolute;
+              left: 50%;
+              top: 20px;
+              transform: translate(-50%, 0%);
+            "
+          />
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" role="button" href="/"
+                ><i class="fas fa-bars"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-decoration-underline"
+                data-widget="control-sidebar"
+                data-slide="true"
+                role="button"
+                href
+                id="logout"
+                style="color: red"
+                >Déconnexion</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          <a
+            class="brand-link"
+            href="/"
+            style="display: block; text-align: center; margin: auto"
+            ><span class="brand-text">Amexpert Commande</span></a
+          >
+          <div
+            class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition"
+          >
+            <div class="os-resize-observer-host observed">
+              <div
+                class="os-resize-observer"
+                style="left: 0px; right: auto"
+              ></div>
+            </div>
+            <div
+              class="os-size-auto-observer observed"
+              style="height: calc(100% + 1px); float: left"
+            >
+              <div class="os-resize-observer"></div>
+            </div>
+            <div class="os-content-glue"></div>
+            <div class="os-padding">
+              <div class="os-viewport os-viewport-native-scrollbars-invisible">
+                <div class="os-content" style="height: 100%; width: 100%">
+                  <div
+                    class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="info">
+                      <a
+                        class="d-block text-decoration-underline"
+                        href="profile.html"
+                        id="name_user"
+                        style="display: inline;"
+                        ></a
+                      >
+                    </div>
+                  </div>
+                  <nav class="mt-2" >
+                    <ul
+                      class="nav nav-pills nav-sidebar flex-column"
+                      data-widget="treeview"
+                      role="menu"
+                      data-accordion="false"
+                    >
+                      <li class="nav-item menu-open">
+                        <a class="nav-link" href="dashboard.html"
+                          ><i class="bi bi-speedometer2"></i>
+                          <p>Tableau de bord</p></a
+                        >
+                      </li>
+                      <li class="sub-menu nav-item" style="display: inline;" id="rdv_link">
+                        <a class="nav-link" href="/utilisateurs"
+                          ><i class="bi bi-calendar-event"></i>
+                          <p>RDV/Commande</p>
+                          <i class="fas fa-angle-left right"></i
+                        ></a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a class="nav-link" href="rendez-vous.html"
+                              ><i class="bi bi-calendar-plus-fill"></i>
+                              <p>Ajoutez un rendez-vous</p></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="rendez-vous_list.html"
+                              ><i class="bi bi-list-columns-reverse"></i>
+                              <p>Liste des rendez-vous</p></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="sub-menu nav-item menu-is-opening menu-open" style="display: inline;" id="user_link">
+                        <a class="nav-link active" href="/utilisateurs"
+                          ><i class="bi bi-people"></i>
+                          <p>Utilisateurs</p>
+                          <i class="fas fa-angle-left right"></i
+                        ></a>
+                        <ul class="nav nav-treeview" style="display: block">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ajouter-un-utilisateur.html"
+                              ><i class="bi bi-person-plus"></i>
+                              <p>Ajouter un utilisateur</p></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link nav-active" href="list.html"
+                              ><i class="bi bi-list-columns-reverse"></i>
+                              <p>Liste des utilisateurs</p></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="sub-menu nav-item" id="param_link" >
+                        <a class="nav-link" href="/utilisateurs"><i class="bi bi-gear"></i>
+                          <p>Paramètres</p>
+                          <i class="fas fa-angle-left right"></i
+                        ></a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a class="nav-link" href="param-in-.html"
+                              ><i class="bi bi-gear-wide-connected"></i>
+                              <p>Type d'interventions</p></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="param-in-.html"
+                              ><i class="bi bi-building"></i>
+                              <p>Nature du bien</p></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"
+            >
+              <div class="os-scrollbar-track">
+                <div
+                  class="os-scrollbar-handle"
+                  style="width: 100%; transform: translate(0px, 0px)"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"
+            >
+              <div class="os-scrollbar-track">
+                <div
+                  class="os-scrollbar-handle"
+                  style="height: 31.7881%; transform: translate(0px, 0px)"
+                ></div>
+              </div>
+            </div>
+            <div class="os-scrollbar-corner"></div>
+          </div>
+        </aside>
+        <div class="content-wrapper" style="min-height: 748px">
+          <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-6"><h1 class="m-0">Plannification</h1></div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item active">
+                      <a class="text-decoration-underline text-dark" href="/"
+                        >Plannification</a
+                      >
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="content">
+            <div class="container-fluid">
+
+              <div class="row">
+                
+                
+
+                <div class="card">   
+                    <div id="steps"></div> 
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="validation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#validation" type="button" role="tab" aria-controls="home" aria-selected="true">Validation</button>
+                        </li>
+                        <li class="nav-item" role="affectation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#affectation" type="button" role="tab" aria-controls="profile" aria-selected="false">Affectation</button>
+                        </li>
+                        <li class="nav-item" role="horaire">
+                          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#horaire" type="button" role="tab" aria-controls="contact" aria-selected="false">Confirmation Horaires</button>
+                        </li>
+                        <li class="nav-item" role="commentaire">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#commentaire" type="button" role="tab" aria-controls="contact" aria-selected="false">Commentaires</button>
+                        </li>
+                        <li class="nav-item" role="documents">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#documents" type="button" role="tab" aria-controls="contact" aria-selected="false">Documents</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="validation" role="tabpanel" aria-labelledby="home-tab">
+                            <form>
+                                <div class="card-body">
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col">
+                                      <h5>INFORMATION PRINCIPALES</h5>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="ref lot">Ref Lot</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          placeholder="Entrer votre Ref Lot"
+                                          name="ref_lot"
+                                          id="ref_lot"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="ref_edl">Ref RDV EDL</label>
+                                        <input
+                                          type="text"
+                                          min="0"
+                                          class="form-control undefined"
+                                          placeholder="Entrer votre Ref RDV EDL"
+                                          name="ref_edl"
+                                          id="ref_edl"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group" id="intervention">
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <label for="ref_edl">Statut</label>
+                                    <select
+                                          class="form-control undefined"
+                                          name="statut"
+                                          id="statut"
+                                        >
+                                          <option value="1">Attente prise en charge</option>
+                                          <option value="2">Prise en charge</option>
+                                          <option value="3">Action requise</option>
+                                          <option value="4">Organisé</option>
+                                        </select>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group" id="propriete">
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col"><h5>INFORMATION DU RDV</h5></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group" id="client">
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="exampleInputEmail1">Date</label
+                                        ><input
+                                          type="datetime-local"
+                                          min="2022-10-14T00:44:24.862Z"
+                                          class="form-control undefined"
+                                          name="date"
+                                          id="date"
+                                          required
+                                          readonly
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group" id="passeur">
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group" id="agent">
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="form-group">
+                                            <label for="nom du locataire">Planneur</label
+                                            ><input
+                                              type="text"
+                                              class="form-control undefined"
+                                              name="planneur"
+                                              id="planneur"
+                                              readonly
+                                            />
+                                          </div>
+                                        </div>
+                                        <div class="col">
+                                          <div class="form-group">
+                                            <label for="prenom du locataire">Agent de constat</label
+                                            ><input
+                                              type="text"
+                                              class="form-control undefined"
+                                              name="constat"
+                                              id="constat"
+                                              readonly
+                                            />
+                                          </div>
+                                        </div>
+                                  </div>
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col">
+                                      <h5>COORDONNEES DU LOCATAIRE</h5>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="nom du locataire">Nom</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="nom_locataire"
+                                          id="nom_locataire"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="prenom du locataire">Prénom</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="prenom_locataire"
+                                          id="prenom_locataire"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="contact du locataire"
+                                          >Numéro de Téléphone</label
+                                        ><input
+                                          type="text"
+                                          min="0"
+                                          class="form-control undefined"
+                                          name="telephone_locataire"
+                                          id="telephone_locataire"
+                                          required
+                                        />
+                                        <i id="erreurPhone" style="display: None;"><small style="color: rgb(248, 31, 31);">Le numéro de téléphone doit commencer par 0 et avoir 10 chiffres</small></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="email du locataire">Email</label
+                                        ><input
+                                          type="email"
+                                          class="form-control undefined"
+                                          name="email_locataire"
+                                          id="email_locataire"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="identité de l'ancien locataire"
+                                          >Identité de l'ancien locataire</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="adresse_ancien_locataire"
+                                          id="adresse_ancien_locataire"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col"><h5>SPECIFICITES DU BIEN</h5></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="surface du bien"
+                                          >Surface du bien - (m<sup>2</sup>)</label
+                                        ><input
+                                          type="number"
+                                          min="0"
+                                          class="form-control undefined"
+                                          name="surface_propriete"
+                                          id="surface_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="Type">Type</label
+                                        ><select
+                                          class="form-control undefined"
+                                          name="type"
+                                          id="type"
+                                          required
+                                        >
+                                          <option value="studio">STUDIO</option>
+                                          <option value="studio meublé">
+                                            STUDIO MEUBLE
+                                          </option>
+                                          <option value="F1">F1</option>
+                                          <option value="F1 Bis">F1 Bis</option>
+                                          <option value="F1 Bis Meublé">
+                                            F1 Bis Meublé
+                                          </option>
+                                          <option value="F2">F2</option>
+                                          <option value="F2 meuble">F2 Meublé</option>
+                                          <option value="F3">F3</option>
+                                          <option value="F3 meuble">F3 Meublé</option>
+                                          <option value="F4">F4</option>
+                                          <option value="F4 meuble">F4 Meublé</option>
+                                          <option value="F5">F5</option>
+                                          <option value="F5 meuble">F5 Meublé</option>
+                                          <option value="F6">F6</option>
+                                          <option value="F6 meuble">F6 Meublé</option>
+                                          <option value="F7">F7</option>
+                                          <option value="F7 meuble">F7 Meublé</option>
+                                          <option value="F8">F8</option>
+                                          <option value="F8 meuble">F8 Meublé</option>
+                                          <option value="T1">T1</option>
+                                          <option value="T1 meuble">T1 Meublé</option>
+                                          <option value="T2">T2</option>
+                                          <option value="T2 meuble">T2 Meublé</option>
+                                          <option value="T3">T3</option>
+                                          <option value="T3 meuble">T3 Meublé</option>
+                                          <option value="T4">T4</option>
+                                          <option value="T4 meuble">T4 Meublé</option>
+                                          <option value="T5">T5</option>
+                                          <option value="T5 meuble">T5 Meublé</option>
+                                          <option value="T6">T6</option>
+                                          <option value="T6 meuble">T6 Meublé</option>
+                                          <option value="T7">T7</option>
+                                          <option value="T7 meuble">T7 Meublé</option>
+                                          <option value="T8">T8</option>
+                                          <option value="T8 meuble">T8 Meublé</option>
+                                          <option value="T9">T9</option>
+                                          <option value="T9 meuble">T9 Meublé</option>
+                                          <option value="T10">T10</option>
+                                          <option value="T10 meuble">T10 Meublé</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="etage">Etage</label
+                                        ><input
+                                          type="number"
+                                          min="0"
+                                          class="form-control undefined"
+                                          name="numero_sol_propriete"
+                                          id="numero_sol_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="N° du logement">N° Logement</label
+                                        ><input
+                                          type="text"
+                                          min="0"
+                                          class="form-control undefined"
+                                          id="numero_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="numéro du parking">N° Parking</label
+                                        ><input
+                                          type="text"
+                                          min="0"
+                                          class="form-control undefined"
+                                          name="numero_parking_propriete"
+                                          id="numero_parking_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="numéro de la cave">N° Cave</label
+                                        ><input
+                                          type="text"
+                                          min="0"
+                                          class="form-control undefined"
+                                          name="numero_cave_propriete"
+                                          id="numero_cave_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col"><h5>LOCALISATION DU BIEN</h5></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="adresse de la propriéte"
+                                          >Adresse</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="adresse_propriete"
+                                          id="adresse_propriete"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="adresse complementaire"
+                                          >Complément d'adresse</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="adresse_complementaire_propriete"
+                                          id="adresse_complementaire_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="code postal">Code Postal</label
+                                        ><input
+                                          type="number"
+                                          min="0"
+                                          class="form-control undefined"
+                                          name="code_postal_propriete"
+                                          id="code_postal_propriete"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="Ville">Ville</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="ville_propriete"
+                                          id="ville_propriete"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col">
+                                      <h5>COORDONNEES DU PROPRIETAIRE</h5>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="nom du bailleure">Nom</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="nom_bailleur"
+                                          id="nom_bailleur"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="prenom du bailleure">Prénom</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="prenom_bailleur"
+                                          id="prenom_bailleur"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="email du bailleure">Email</label
+                                        ><input
+                                          type="email"
+                                          class="form-control undefined"
+                                          name="email_bailleur"
+                                          id="email_bailleur"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label for="reference">Reférence</label
+                                        ><input
+                                          type="text"
+                                          class="form-control undefined"
+                                          name="reference_bailleur"
+                                          id="reference_bailleur"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-2 mb-3">
+                                    <div class="col"><h5>INDICATION DIVERSE</h5></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label for="exampleInputEmail1"
+                                          >Liste des documents</label
+                                        ><textarea
+                                          class="form-control undefined"
+                                          name="list_documents"
+                                          id="list_documents"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label for="exampleInputEmail1"
+                                          >Consignes particulière</label
+                                        ><textarea
+                                          class="form-control undefined"
+                                          name="consignes_part"
+                                          id="consignes_part"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1"
+                                        >Informations diverses</label
+                                      ><textarea
+                                        class="form-control undefined"
+                                        name="info_diverses"
+                                        id="info_diverses"
+                                      ></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer" id="pied" style="display: inline;">
+                                  <a id="goEditRdv" class="btn btn-primary">
+                                    Enregistrer
+                                  </a>&nbsp;&nbsp;
+                                  <a id="goLeave" class="btn btn-danger">
+                                    Annuler
+                                  </a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="affectation" role="tabpanel" aria-labelledby="profile-tab">
+                            <br>
+                            <h3>Affectation des gestionnaires du Rendez-vous</h3>
+                            <div class="row">
+                               
+                                <div class="col" id="passeur_select">
+                                    
+                                </div>
+                                <div class="col" id="planneur_select">
+                                    
+                                </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                <div class="col" id="btnPlanneur" style="display: inline;">
+                                    <a id="goPlanneur" class="btn btn-primary">
+                                        Valider
+                                    </a>
+                                </div>
+                              </div>
+                              <br>
+                        </div>
+                        <div class="tab-pane fade" id="horaire" role="tabpanel" aria-labelledby="contact-tab">
+                            <br>
+                            <h3>
+                                Edition des horaires 
+                            </h3>
+                            <form>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">Date</label
+                                          ><input
+                                            type="datetime-local"
+                                            class="form-control undefined"
+                                            name="date_plan"
+                                            id="date_plan"
+                                          />
+                                        </div>
+                                      </div>
+                                  </div>
+                                <div class="row">
+                                    <div class="col" id="piedDate" style="display: inline;">
+                                        <a id="goDate" class="btn btn-primary">
+                                            Valider
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="commentaire" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1"
+                                        >Commentaires</label
+                                      ><textarea
+                                        class="form-control undefined"
+                                        name="comentaire"
+                                        id="comentaire"
+                                      ></textarea>
+                                    </div>
+                                  </div>
+                                  <input type="hidden" id="idComment">
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a id="goCommentaire" class="btn btn-primary">
+                                        Valider
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <table class="table table-striped text-nowrap">
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>Auteur</th>
+                                    <th>Commentaires</th>
+                                    <th>Dates</th>
+                                    <th>Editer</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="contentTableComments" style="height:200px;overflow-y:auto;width: 100%;">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="contact-tab">
+                                
+                              <form enctype="multipart/form-data">
+                                  <div class="row">
+                                  <div class="col-4">
+                                      <label for="exampleInputEmail1">Fichier</label
+                                      ><input type="file" class="form-control undefined" name="doc" id="doc">
+                                  </div>
+                                  <div class="col-4">
+                                      <label for="ref_edl">Type de fichier</label>
+                                      <select class="form-control undefined" name="typeF" id="typeF">
+                                          <option value="photo">Photo</option>
+                                          <option value="document">Document</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-4">
+                                    <label for="exampleInputEmail1">Commentaire</label
+                                    ><input type="text" class="form-control undefined" name="raison" id="raison">
+                                </div>
+                              </div>
+                              </form>
+                                    
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <a id="goFile" class="btn btn-primary">
+                                        Valider
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <table class="table table-striped text-nowrap">
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>Auteur</th>
+                                    <th>Fichier</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                              <tbody id="contentTableFile" style="height:200px;overflow-y:auto;width: 100%;">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                    
+                </div>
+                
+              </div>
+                    
+
+                
+              </div>
+             
+            </div>
+          </section>
+        </div>
+        <footer class="main-footer" style="max-height: 57px; height: 57px">
+          <div class="float-right d-none d-sm-block"><b>Version</b> 1.0.0</div>
+          <strong
+            >Copyright © 2021
+            <a
+              href="https://amexpert.pro/"
+              rel="noopener noreferrer"
+              target="_blank"
+              style="color: black"
+              >Amexpert</a
+            >.</strong
+          >
+          Tous droits réservés.
+        </footer>
+      </div>
+      <div class="Toastify" style=""></div>
+    </div>
+    <script src="assets/dist/js/jquery-cookie-master/src/jquery.cookie.js" ></script>
+    <script  src="assets/dist/js/login.js" ></script>
+    <script  src="assets/dist/js/url.js" ></script>
+    <script src="assets/dist/css/jquery.progressbar.js"></script>
+    <script src="assets/dist/js/rdv_add.js" ></script>
+    <script src="assets/dist/js/plannification.js" ></script>
+
+    <script>
+      checkLoged()
+      window.onload = function(){
+        loadNav()
+        getRdvToEditP()
+      }
+
+      
+    </script>
+  </body>
+</html>

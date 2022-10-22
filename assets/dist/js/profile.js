@@ -27,6 +27,7 @@ function getLogedBoy(){
             $('#telephone').val(response[0]['telephone'])
             $('#adresse').val(response[0]['adresse'])
             $('#type_user').val($.cookie("group"))
+            $('#text_role').text($.cookie("group"))
             if($.cookie("group")=="Agent constat"){
                 $('#trigramme').val(response[0]['trigramme'])
                 $('#as').css('display','inline')
@@ -68,7 +69,7 @@ function getLogedBoy(){
             }
             if($.cookie("group")=="Client pro" || $.cookie("group")=="Client particulier" ){
                 $('#as').css('display','inline')
-                getAs(2,2,response[0]["agent_secteur"])
+                getAs(2,2,response[0]['info_concession']['agent_rattache']["id"])
                 $('#tri').css('display','none')
             }  
         },
