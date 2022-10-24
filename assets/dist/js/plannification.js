@@ -206,9 +206,9 @@ function sendCommend(){
     var method=""
     var url =""
     var data = {}
-    data['user_id'] = $.cookie('id_logged_user_user')
-    data['rdv_id'] = $.cookie('rdv_to_edit')
-    data['contenu'] = $('#comentaire').val()
+    data['user'] = $.cookie('id_logged_user_user')
+    data['rdv'] = $.cookie('rdv_to_edit')
+    data['comment'] = $('#comentaire').val()
     if(!$('idComment').val()){
         method = "POST"
         url = commentaires_app
@@ -218,7 +218,7 @@ function sendCommend(){
     }
     $.ajax({
         type: method,
-        url: url,
+        url: "http://195.15.218.172/rdv_app/rdv/comments/",
         data: data,
         headers: {
             'Authorization':"Bearer "+token

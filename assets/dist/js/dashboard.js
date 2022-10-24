@@ -13,9 +13,20 @@ function configCal() {
     headerToolbar: {
         left: 'prev,next',
         center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
     datesSet: function(info){
         evt = getEvent(info.startStr.split('T')[0],info.endStr.split('T')[0])
+        $(".fc-dayGridMonth-button").text(" ");
+        $(".fc-dayGridMonth-button").text("Mois");
+        $(".fc-timeGridDay-button").text(" ")
+        $(".fc-timeGridDay-button").text("Jours")
+        $(".fc-timeGridWeek-button").text(" ");
+        $(".fc-timeGridWeek-button").text("Semaine");
+        $('.fc-timegrid-axis-cushion').css('display','none')
+
+        $(".fc-today-button").text(" ")
+        $(".fc-today-button").text("Aujourd'hui")
     },
     eventMouseEnter: function (info) {
         tooltip = '<div class="tooltiptopicevent" style="opacity:1;width:auto;height:auto;background:#feb811;position:absolute;z-index:10001;padding:10px 10px 10px 10px ;  line-height: 200%;">' + 'RDV: ' + ': ' + info.event.title + '</br>' + 'Date: ' + ': ' + info.event.start + '</div>';
@@ -96,6 +107,7 @@ function getEvent(debut,fin){
                 }
                 calendar.addEvent(ev)
                 evt.push(ev)
+
             })
         },
         error: function(response){
