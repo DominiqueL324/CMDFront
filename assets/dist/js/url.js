@@ -1,18 +1,19 @@
-  var toEdit = 0
-  var Edition = 0
-  var base_local = "http://127.0.0.1:8000"
-  var base_online = "http://195.15.218.172"
-  const asurl_not_paginated = base_local+"/agent_app/agent/?paginated=t"
-  const client_add = base_local+"/client_app/client/"
-  const client_add_not_pg = base_local+"/client_app/client/?paginated=t"
-  const agent_add = base_local+"/agent_app/agent/"
-  const admin_add = base_local+"/admin_app/admin/"
-  const salarie_add = base_local+"/salarie_app/salarie/"
-  const salarie_add_not_pg = base_local+"/salarie_app/salarie/?paginated=t"
-  const intervention = base_local+"/config_app/intervention/?paginated=t"
-  const propriete = base_local+"/config_app/propriete/?paginated=t"
-  const user_all = base_local+"/admin_app/users/"
-  const rdv_add = base_local+"/rdv_app/rdv/"
-  const commentaires_app = "http://195.15.218.172"+"/rdv_app/rdv/"
-  const files_app = base_local+"/file_app/file/"
-  const token = $.cookie("token")
+var toEdit = 0;
+var Edition = 0;
+var base_local = "http://127.0.0.1:8000";
+var base_online = "http://195.15.218.172";
+const asurl_not_paginated = base_local + "/agent_app/agent/?paginated=t";
+const client_add = base_local + "/client_app/client/";
+const client_add_not_pg = base_local + "/client_app/client/?paginated=t";
+const agent_add = base_local + "/agent_app/agent/";
+const admin_add = base_local + "/admin_app/admin/";
+const salarie_add = base_local + "/salarie_app/salarie/";
+const salarie_add_not_pg = base_local + "/salarie_app/salarie/?paginated=t";
+const intervention = base_local + "/config_app/intervention/?paginated=t";
+const propriete = base_local + "/config_app/propriete/?paginated=t";
+const user_all = base_local + "/admin_app/users/";
+const rdv_add = base_local + "/rdv_app/rdv/";
+const param_url = base_local + "/config_app/propriete/";
+const commentaires_app = "http://195.15.218.172" + "/rdv_app/rdv/";
+const files_app = base_local + "/file_app/file/";
+const token = $.cookie("token");
