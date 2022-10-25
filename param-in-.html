@@ -262,16 +262,20 @@
                               >Type d'intervention</label
                             ><input
                               class="form-control undefined"
-                              name="type"
+                              name="type" 
+                              id="inter_id"
                             />
                           </div>
                         </div>
+                        
+                        
                         <div class="row mt-2">
                           <div class="col">
                             <label for="intervention">Statut*</label
                             ><select
                               class="form-control undefined"
                               name="statut"
+                              id="stat_id"
                             >
                               <option value="s" selected="">
                                 --choisissez--
@@ -281,9 +285,380 @@
                             </select>
                           </div>
                         </div>
+                        
+                        
+                         <div class="card-body table-responsive p-0">
+                      <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th><em>Type Intervention</em></th>
+                            <th>Statut</th>
+                            
+                          
+                            <th class="text-center">Action</th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>DAVID DUART</td>
+                            <td>gestiongerance@cabinetgcardinal.com</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/1/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/1/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>CAROLE BARAT</td>
+                            <td>c.barat@euroimmo.fr/1</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-success"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >activer</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/3/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/3/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Leslie MENGUY</td>
+                            <td>lesliemenguy@gmail.com</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-success"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >activer</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/4/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/4/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>ARNAUD SEGARD</td>
+                            <td>asegard@asd-patrimoine.fr</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/5/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/5/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>ERIKA DELFOSSE</td>
+                            <td>defim.gestion@gmail.com</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/6/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/6/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>BENOIT DUPONT</td>
+                            <td>ruenationale@century21.fr</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/7/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/7/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>IGOR DARONDEL</td>
+                            <td>contact@lillemetropoleimmobilier.com</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/8/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/8/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>HIEN MAXENCE</td>
+                            <td>mhien@arthur-loyd.com</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/9/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/9/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>CAILLAUD LAURET</td>
+                            <td>laurent.caillaud@foncia.de</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/10/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/10/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>NORGUET CAROLE</td>
+                            <td>norguet.carole@gmail.com</td>
+                            <td class="text-center">
+                              <span class="badge badge-success"
+                                >client pro</span
+                              >
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-danger"
+                                style="
+                                  cursor: pointer;
+                                  text-decoration: underline;
+                                  border-radius: 4px;
+                                "
+                                >désactiver</span
+                              >
+                            </td>
+                            <td>
+                              <a href="/modifier/11/client/utilisateur"
+                                ><i
+                                  class="bi bi-pencil-square"
+                                  style="color: rgb(0, 0, 0)"
+                                ></i
+                              ></a>
+                              &nbsp;<a href="/voir/11/client/utilisateur"
+                                ><i
+                                  class="bi bi-eye"
+                                  style="color: rgb(136, 102, 119)"
+                                ></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                        
                       </div>
                       <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" id="param-id">
                           Enregistrer
                         </button>
                       </div>
