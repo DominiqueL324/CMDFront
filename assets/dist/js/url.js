@@ -13,7 +13,6 @@ const intervention = base_local + "/config_app/intervention/?paginated=t";
 const propriete = base_local + "/config_app/propriete/?paginated=t";
 const user_all = base_local + "/admin_app/users/";
 const rdv_add = base_local + "/rdv_app/rdv/";
-const param_url = base_local + "/config_app/propriete/";
 const commentaires_app = "http://195.15.218.172" + "/rdv_app/rdv/";
-const files_app = base_local + "/file_app/file/";
+const files_app = "http://195.15.218.172" + "/rdv_app/rdv/documents/";
 const token = $.cookie("token");
