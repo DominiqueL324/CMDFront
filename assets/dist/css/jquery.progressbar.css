@@ -39,7 +39,7 @@ ul.progressbar li:last-child:after {
   content: none;
 }
 ul.progressbar li.done:before, ul.progressbar li.done:after {
-  background: rgb(247, 202, 6);
+  background: rgba(18, 115, 241, 0.589);
   color: #fff;
 
 }
@@ -49,4 +49,16 @@ ul.progressbar li.current:before {
 }
 ul.progressbar li.fail:before {
   background: rgb(229, 48, 40)
+}
+
+ul.progressbar li.orange:before {
+  background: rgb(255, 184, 31)
+}
+
+ul.progressbar li.bleu:before {
+  background: rgb(31, 121, 255)
+}
+
+ul.progressbar li.vert:before {
+  background: rgb(70, 245, 17)
 }

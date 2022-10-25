@@ -33,6 +33,7 @@ function login(){
                     $.cookie("id_client_sal",response["client"]["id"])
                     alert($.cookie("id_client_sal"))
                     $.cookie("nom_client_sal",response["client"]["nom"])
+                    $.cookie("prenom_client_sal",response["client"]["prenom"])
                     $.cookie("societe_client_sal",response["client"]["societe"])
                     $.cookie("id_user_agent",response["client"]["agent_user"])
                 }

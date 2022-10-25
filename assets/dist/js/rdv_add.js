@@ -29,7 +29,13 @@ function getClient(cas=0,val_=1){
             success: function(response){
                 console.log(response)
                 content = "<option value='0'>****************************************</option>"
-                response['results'].forEach(elt => {
+                var r = ""
+                if(typeof(response['results'])==='undefined'){
+                    r = response
+                }else{
+                    r = response['results']
+                }
+                r.forEach(elt => {
                      content = content + "<option value = " + elt['id'] + ">"+ elt['societe'] +" " +elt['user']['nom'] + " --- " + elt['user']['prenom'] + "</option>"
                 });
                 $('#client').empty()

@@ -47,7 +47,7 @@ function getAllRdv(){
                             <span class="badge badge-primary">'+elt["propriete"]["type_propriete"]["type"]+'</span>\
                         </td>\
                         <td>\
-                            <a  onclick=\'goWhereEdit('+ elt["id"] +')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></a>&nbsp;<a onclick=\'goWhereEdit1('+ elt["id"] +')\'><i class="bi bi-eye" style="color: rgb(136, 102, 119)"></i></a>\
+                            <a  onclick=\'goWhereEdit('+ elt["id"] +')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></a>&nbsp;<a onclick=\'goWhereEdit1('+ elt["id"] +')\'><i class="fa fa-calendar" aria-hidden="true" style="color: rgb(136, 102, 119)"></i></a>\
                         </td>\
                     </tr>'
                 )

@@ -104,22 +104,22 @@ function getRdvToEditP(){
             if(parseInt(response[0]["statut"])==1){
                 
                 $('#steps').progressbar({
-                    steps: ['@En attente de prise en charge','Prise en charge attente horaire','Action requise','Organisé']
+                    steps: ['@En attente de prise en charge','1Prise en charge attente horaire','2Action requise','3Organisé']
                 });
             } 
             if(parseInt(response[0]["statut"])==2){
                 $('#steps').progressbar({
-                    steps: ['En attente de prise en charge','@Prise en charge attente horaire','Action requise','Organisé']
+                    steps: ['~En attente de prise en charge','@1Prise en charge attente horaire','2Action requise','3Organisé']
                 });
             }
             if(parseInt(response[0]["statut"])==3){
                 $('#steps').progressbar({
-                    steps: ['En attente de prise en charge','Prise en charge attente horaire','@Action requise','Organisé']
+                    steps: ['~En attente de prise en charge','1Prise en charge attente horaire','@2Action requise','3Organisé']
                 });
             }
             if(parseInt(response[0]["statut"])==4){
                 $('#steps').progressbar({
-                    steps: ['En attente de prise en charge','Prise en charge attente horaire','Action requise','@Organisé']
+                    steps: ['~En attente de prise en charge','1Prise en charge attente horaire','2Action requise','@3Organisé']
                 });
             }
             var ap=""
@@ -224,10 +224,11 @@ function sendCommend(){
             'Authorization':"Bearer "+token
         },
         success: function(response){
-            alert("Opération sur le commentaire effectuée avec succè")
-            getCommentToedit()
+            alert("Opération sur le commentaire effectuée avec succès")
             $('#comentaire').val("")
-            $('idComment').val("")
+            $('#idComment').val("")
+            getCommentaires()
+            
         } 
     })
 }
@@ -235,9 +236,10 @@ $('#goCommentaire').on('click',function(){
     sendCommend()
 })
 function getCommentToedit(id){
+    //alert(id)
     $.ajax({
         type: 'GET',
-        url: commentaires_app+id.toISOString(),
+        url: commentaires_app+id.toString()+"/comment/",
         headers: {
             'Authorization':"Bearer "+token
         },

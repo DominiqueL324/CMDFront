@@ -13,6 +13,6 @@
   const propriete = base_local+"/config_app/propriete/?paginated=t"
   const user_all = base_local+"/admin_app/users/"
   const rdv_add = base_local+"/rdv_app/rdv/"
-  const commentaires_app = base_local+"/commentaire_app/commentaire/"
+  const commentaires_app = "http://195.15.218.172"+"/rdv_app/rdv/"
   const files_app = base_local+"/file_app/file/"
   const token = $.cookie("token")
