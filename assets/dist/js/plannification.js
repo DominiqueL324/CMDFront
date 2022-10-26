@@ -142,7 +142,7 @@ function getRdvToEditP() {
       if (parseInt(response[0]["statut"]) == 1) {
         $("#steps").progressbar({
           steps: [
-            "@En attente de prise en charge",
+            "@~En attente de prise en charge",
             "1Prise en charge attente horaire",
             "2Action requise",
             "3Organisé",

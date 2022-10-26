@@ -265,7 +265,7 @@
           <section class="content">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-12">
+                <div class="col-12" id="result" style="display: none;">
                   <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading">Resultat de votre recherche</h4>
                     <p id="text_ok"></p>
@@ -287,7 +287,7 @@
                                 <option value="4">Organisé</option>
                               </select>
                             </div>
-                            <div class="col-2 form-group" >
+                            <!--<div class="col-2 form-group" id="role_group"  style="display: inline;">
                               <label for="ref_edl">Rôle</label>
                               <select class="form-control" name="role" id="role">
                                 <option value="0">Role </option>
@@ -297,7 +297,7 @@
                                 <option value="4">Tous les rôles</option>
                               </select>
                             
-                          </div>
+                          </div>-->
                           <div class="col-2 form-group" >
                             <label for="ref_edl">Date debut</label>
                             <input type="date"name="table_search" class="form-control"
@@ -313,10 +313,21 @@
                             <div id="client">
                             </div>
                           </div>
-                          <div class=" col-2 form-group" >
-                            <a href="#" class="btn btn-primary"> Rechercher</a>
-                          </div>
 
+                          <div class="col-2 form-group" id="passeur">
+
+                          </div>
+                          <div class="col-2 form-group" id="agent">
+
+                          </div>
+                          
+                        </div>
+
+                        <div class="row">
+                          
+                          <div class=" col-2 form-group" >
+                            <a href="#" class="btn btn-primary" id="find"> Rechercher</a>
+                          </div>
                         </div>
                         
                           
@@ -422,7 +433,7 @@
       checkLoged()
       //loadNav()
       getAllRdv();
-      getClientF()
+      onload()
       window.onload = function(){
         loadNav()
       }
