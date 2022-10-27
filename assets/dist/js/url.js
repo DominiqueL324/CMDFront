@@ -16,6 +16,7 @@ const propriete = base_local + "/config_app/propriete/?paginated=t";
 const user_all = base_local + "/admin_app/users/";
 const tri_url = base_local + "/rdv_app/rdv/tri/";
 const rdv_add = base_local + "/rdv_app/rdv/";
+const stat_url = base_local + "/manager_app/states/";
 const commentaires_app = "http://195.15.218.172" + "/rdv_app/rdv/";
 const files_app = "http://195.15.218.172" + "/rdv_app/rdv/documents/";
 const token = $.cookie("token");

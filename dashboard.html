@@ -36,13 +36,13 @@
               position: absolute;
               left: 50%;
               top: 20px;
-              transform: translate(-50%, 0%);
+              transform: translate(-50%, 0%);  
             " />
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" data-widget="pushmenu" role="button" href="/"><i class="fas fa-bars"></i
               ></a>
-                    </li>
+                    </li>  
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -106,7 +106,7 @@
                       <li class="sub-menu nav-item" style="display: inline;" id="rdv_link">
                         <a class="nav-link" href="/utilisateurs"
                           ><i class="bi bi-calendar-event"></i>
-                          <p>RDV/Commande</p>
+                          <p>Commande</p>
                           <i class="fas fa-angle-left right"></i
                         ></a>
                         <ul class="nav nav-treeview">
@@ -232,13 +232,13 @@
           <section class="content">
             <div class="container-fluid">
               <div class="row">
-                <div class="col">
+                <div class="col" id="user_box">
                   <div class="small-box bg-1" style="position: relative">
                     <div class="inner">
-                      <h3>713</h3>
+                      <h3 id="nombre_user">713</h3>
                       <p>
                         <a href="list.html" style="color: black"
-                          >NOMBRE D’UTILISATEURS</a
+                          >UTILISATEURS</a
                         >
                       </p>
                     </div>
@@ -251,13 +251,13 @@
                     ></span>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col" id="adminbox">
                   <div class="small-box bg-3" style="position: relative">
                     <div class="inner">
-                      <h3>36</h3>
+                      <h3 id="nombre_admin">36</h3>
                       <p>
                         <a href="list.html" style="color: white"
-                          >NOMBRE D'ADMINISTRATEURS</a
+                          >ADMINISTRATEURS</a
                         >
                       </p>
                     </div>
@@ -270,10 +270,10 @@
                     ></span>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col" id="agentbox">
                   <div class="small-box bg-4" style="position: relative">
                     <div class="inner">
-                      <h3>151</h3>
+                      <h3 id="agent_nombre"></h3>
                       <p>
                         <a href="list.html" style="color: white"
                           >NOMBRE D'AGENT</a
@@ -289,10 +289,10 @@
                     ></span>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col" id="clientbox">
                   <div class="small-box bg-5" style="position: relative">
                     <div class="inner">
-                      <h3>372</h3>
+                      <h3 id="nombre_client">372</h3>
                       <p>
                         <a href="list.html" style="color: white"
                           >NOMBRE DE CLIENT</a
@@ -308,13 +308,41 @@
                     ></span>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col" id="rdvattentebox">
                   <div class="small-box bg-2">
                     <div class="inner">
-                      <h3>4</h3>
+                      <h3 id="rdv_attente">4</h3>
                       <p>
-                        <a href="rendez-vous_list.html" style="color: white"
-                          >NOMBRE DE RENDEZ-VOUS</a
+                        <a href="rendez-vous-attente.html" style="color: white"
+                          >RENDEZ-VOUS EN ATTENTE</a
+                        >
+                      </p>
+                    </div>
+                    <div class="icon"><i class="ion ion-stats-bars"></i></div>
+                    <span class="small-box-footer cursor"></span>
+                  </div>
+                </div>
+                <div class="col" id="salariebox">
+                  <div class="small-box bg-5">
+                    <div class="inner">
+                      <h3 id="salarie_nombre">4</h3>
+                      <p>
+                        <a href="list.html" style="color: white"
+                          >SALARIES</a
+                        >
+                      </p>
+                    </div>
+                    <div class="icon"><i class="ion ion-stats-bars"></i></div>
+                    <span class="small-box-footer cursor"></span>
+                  </div>
+                </div>
+                <div class="col" id="rdvvalidebox">
+                  <div class="small-box bg-2">
+                    <div class="inner">
+                      <h3 id="rdv_valide">4</h3>
+                      <p>
+                        <a href="rendez-vous-en-charge.html" style="color: white"
+                          >RENDEZ-VOUS PRIS EN CHARGE</a
                         >
                       </p>
                     </div>
@@ -360,8 +388,10 @@
     <script>
       checkLoged()
       configCal()
+      loadStat()
       window.onload = function(){
         loadNav()
+        
       }
     </script>
   </body>

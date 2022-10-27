@@ -34,8 +34,7 @@ function getClient(cas = 0, val_ = 1) {
       },
       success: function (response) {
         console.log(response);
-        content =
-          "<option value='0'>****************************************</option>";
+        content = "<option value='0'>SELECTIONNER</option>";
         var r = "";
         if (typeof response["results"] === "undefined") {
           r = response;
@@ -129,8 +128,7 @@ function getPasseur(cas = 0) {
       Authorization: "Bearer " + token,
     },
     success: function (response) {
-      content =
-        "<option value='0'>****************************************</option>";
+      content = "<option value='0'>SELECTIONNER</option>";
       response.forEach((elt) => {
         content =
           content +
@@ -176,8 +174,7 @@ function getAgent(cas = 1, val_ = 0) {
       },
       success: function (response) {
         //console.log(response)
-        content =
-          "<option value='0'>****************************************</option>";
+        content = "<option value='0'>SELECTIONNER</option>";
         response.forEach((elt) => {
           content =
             content +
@@ -258,8 +255,7 @@ function getInterventionandPropriete(cas = 1, val_ = 0, val1 = 0) {
       Authorization: "Bearer " + token,
     },
     success: function (response) {
-      content =
-        "<option value='0'>****************************************</option>";
+      content = "<option value='0'>SELECTIONNER</option>";
       response.forEach((elt) => {
         content =
           content +
@@ -291,8 +287,7 @@ function getInterventionandPropriete(cas = 1, val_ = 0, val1 = 0) {
       Authorization: "Bearer " + token,
     },
     success: function (response) {
-      content =
-        "<option value='0'>****************************************</option>";
+      content = "<option value='0'>SELECTIONNER</option>";
       response.forEach((elt) => {
         content =
           content +
