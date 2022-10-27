@@ -155,7 +155,7 @@
                                         </li>
                                       </ul>
                                     </li>
-                                    <li class="sub-menu nav-item menu-is-opening menu-open" style="display: inline;" id="user_link">
+                                    <li class="sub-menu nav-item menu-is-opening" style="display: inline;" id="user_link">
                                       <a class="nav-link active" href="/utilisateurs"
                                         ><i class="bi bi-people"></i>
                                         <p>Utilisateurs</p>
@@ -176,9 +176,8 @@
                                         </li>
                                       </ul>
                                     </li>
-                                    
-                                         <li class="sub-menu nav-item menu-is-opening 
-                                                      menu-open" style="display: inline;" id="plannification_link">
+                                                        
+                                        <li class="sub-menu nav-item menu-is-opening menu-open" style="display: inline;" id="plannification_link">
                                                   <a class="nav-link active" href="/#"><i class="bi bi-gear"></i>
                                                       <p>Planification</p>
                                                       <i class="fas fa-angle-left right"></i>
@@ -196,7 +195,8 @@
                                                   </li>
                                               </ul>
                                         </li>
-                                    
+                                            
+                                            
                                     <li class="sub-menu nav-item" id="param_link" style="display: inline;">
                                       <a class="nav-link" href="/utilisateurs"
                                         ><i class="bi bi-gear"></i>
@@ -251,7 +251,7 @@
             <div class="container-fluid">
               <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0">Rendez-vous pris en charge</h1>
+                  <h1 class="m-0">Rendez-vous non pris en charge</h1>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
@@ -276,14 +276,12 @@
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <div class="row">
+                    <div class="row">
                         <div class="col-2 form-group" >
                           <label for="ref_edl">Statut</label>
                           <select class="form-control" name="etat" id="etat">
                             <option value="0">Statut</option>
-                            <option value="2">Prise en charge</option>
-                            <option value="3">Action requise</option>
-                            <option value="4">Organisé</option>
+                            <option value="1">Attente prise en charge</option>
                           </select>
                         </div>
                         <!--<div class="col-2 form-group" id="role_group"  style="display: inline;">
@@ -328,10 +326,7 @@
                         <a href="#" class="btn btn-primary" id="find"> Rechercher</a>
                       </div>
                     </div>
-                        
-                          
-                          
-                          
+   
                     </div>
                     <div class="card-body">
                       <table class="table text-nowrap" style="overflow-x:auto;">
@@ -432,7 +427,7 @@
     <script>
       checkLoged()
       //loadNav()
-      getRdvC(pris_en_charge=1);
+      getRdvC();
       onload()
       window.onload = function(){
         loadNav()
