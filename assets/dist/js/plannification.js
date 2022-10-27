@@ -9,7 +9,7 @@ function getAgentManage(as, ap) {
     success: function (response) {
       //console.log(response)
       content =
-        "<option value='0'>****************************************</option>";
+        "<option value='0'></option>";
       response.forEach((elt) => {
         content =
           content +
@@ -437,6 +437,7 @@ $("#goEditRdv").on("click", function () {
   data["intervention"] = $("#intervention_val").val();
   data["statut"] = $("#statut").val();
   data["date"] = $("#date").val();
+  data["status"] = "CHANGEMENT DE STATUT";
   if (
     $.cookie("group") == "Agent secteur" ||
     $.cookie("group") == "Agent constat" ||
@@ -525,6 +526,7 @@ $("#goPlanneur").on("click", function () {
       audit_planneur: $("#planneur_val").val(),
       agent_constat: $("#constat_val").val(),
       cas: "management",
+      status: "AFFECTATION AGENT SECTEUR",
     },
     headers: {
       Authorization: "Bearer " + token,
@@ -546,7 +548,11 @@ $("#goDate").on("click", function () {
   $.ajax({
     type: "PUT",
     url: rdv_add + $.cookie("rdv_to_edit").toString(),
-    data: { date: $("#date_plan").val(), final: "okay" },
+    data: {
+      date: $("#date_plan").val(),
+      final: "okay",
+      status: "CONFIRMATION HORAIRES",
+    },
     headers: {
       Authorization: "Bearer " + token,
     },
