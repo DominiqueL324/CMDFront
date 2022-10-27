@@ -265,25 +265,44 @@
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
+
+                      <div class="row">
+                        <div class="col-2 form-group" >
+                          <label for="ref_edl">Statut</label>
+                          <select class="form-control" name="role" id="role">
+                            <option value="0">Role</option>
+                            <option value="administrateur">Administrateur</option>
+                            <option value="Agent secteur">Agent secteur</option>
+                            <option value="Agent constat">Agent Constat</option>
+                            <option value="Audit planneur">Audit planneur</option>
+                            <option value="Client pro">Client Pro</option>
+                            <option value="Client particulier">Client particulier</option>
+                            <option value="Salarie">Salarié </option>
+                          </select>
+                        </div>
+                        <div class="col-2 form-group" id="role_group"  style="display: inline;">
+                          <label for="ref_edl">Etat</label>
+                          <select class="form-control" name="etat" id="etat">
+                            <option value="-1">**************</option>
+                            <option value="1">Actif</option>
+                            <option value="0">Inactif</option>
+                          </select>
+                        
+                      </div>
+                      <div class="col-2 form-group" id="role_group">
+                        <label for="ref_edl">Recherche </label>
+                          <input type="text" name="table_search" class="form-control " placeholder="Recherche" id="filtre"/>
+                      </div>
+                      <div class=" col-2 form-group" >
+                        <a href="#" class="btn btn-primary" id="find"> Rechercher</a>
+                      </div>
+
+                      </div>
+                      
+
                       <h3 class="card-title"></h3>
                       <div class="card-tools">
-                        <div
-                          class="input-group input-group-sm"
-                          style="width: 150px"
-                        >
-                          <input
-                            type="text"
-                            name="table_search"
-                            class="form-control float-right"
-                            placeholder="Recherche"
-                            id="filtre"
-                          />
-                          <div class="input-group-append">
-                            <button type="submit" class="btn btn-default">
-                              <i class="fas fa-search"></i>
-                            </button>
-                          </div>
-                        </div>
+                        
                       </div>
                     </div>
                     <div class="card-body">
