@@ -552,6 +552,12 @@ function getRdvToEdit() {
         $("#param_link").empty();
         $("#param_link").css("display", "none");
       }
+      if ( $.cookie("group") == "Client pro" || $.cookie("group") == "Client particulier") {
+        $("#statut").prop("disabled", true);
+        if (parseInt(response[0]["statut"]) != 1) {
+          $("#pied").css("display", "none");
+        }
+    }
     },
     error: function (response) {
       console.log(response);
